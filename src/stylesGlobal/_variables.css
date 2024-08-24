@@ -2,56 +2,56 @@
 @import url('../../public/static/fonts/fonts.css');
 
 :root {
-  --color-primary: var(--brand-blue);
-  --color-secondary: var(--brand-green);
-  --color-highlight: var(--brand-green);
+  --color-primary: var(--brand-red);
+  --color-secondary: var(--brand-black);
+  --color-highlight: var(--brand-red);
 
   /* Only use these vars for most color referencing for easy light/dark mode */
   --font-color-text: var(--brand-black);
-  --font-color-heading: var(--brand-blue);
-  --font-color-light: var(--color-blue);
+  --font-color-heading: var(--brand-red);
+  --font-color-light: var(--brand-red);
   --background-body: var(--brand-white);
   --background-body-transparent: rgba(255, 255, 255, 0.8);
   --background-content: var(--brand-white);
   --background-highlight: var(--brand-grey-lighter);
   --border-color: var(--brand-grey-lighter);
   --box-shadow-color: rgba(0, 0, 0, 0.05);
-  --checkbox-selected-background: var(--brand-green);
+  --checkbox-selected-background: var(--color-primary);
   --bookmark-icon-fill-color: var(--brand-grey-light);
-  --bookmark-icon-selected-fill-color: var(--brand-green);
+  --bookmark-icon-selected-fill-color: var(--color-primary);
   --link-font-color: var(--color-highlight);
   --nft-refresh-icon-fill: var(--brand-white);
   --badge-background-color: var(--color-primary);
   --nft-placeholder-background: var(--brand-gradient);
 
   /* Menubar */
-  --menu-logo-color: var(--brand-gaia-x-blue);
-  --menu-logo-color-hover: var(--brand-gaia-x-blue);
+  --menu-logo-color: var(--brand-red);
+  --menu-logo-color-hover: var(--brand-red);
   --menu-logo-size-width-sm: 13rem;
   --menu-logo-size-height-sm: auto;
   --menu-logo-size-width-lg: 13rem;
   --menu-logo-size-height-lg: auto;
-  --menu-font-color: var(--color-primary);
-  --menu-font-color-active: var(--color-secondary);
-  --menu-font-color-hover: var(--color-secondary);
-  --menu-active-indicator-color: var(--brand-blue);
+  --menu-font-color: var(--brand-black);
+  --menu-font-color-active: var(--brand-black);
+  --menu-font-color-hover: var(--color-primary);
+  --menu-active-indicator-color: var(--brand-red);
   --menu-mobile-navigation-border-size: var(--border-size-sm);
   --menu-mobile-navigation-border-color: var(--brand-grey-lighter);
-  --menu-border-color: var(--color-primary);
+  --menu-border-color: var(--brand-black);
   --menu-border-radius: var(--border-radius-sm);
   --menu-border-size: var(--border-size);
-  --menu-icon-fill-color: var(--color-primary);
-  --menu-icon-fill-color-hover: var(--color-primary);
+  --menu-icon-fill-color: var(--brand-black);
+  --menu-icon-fill-color-hover: var(--brand-black);
   --menu-title-font-size: var(--font-size-h4);
   --menu-link-font-size: var(--font-size-large);
   --menu-link-font-weight: var(--font-weight-bold);
   --menu-link-font-weight-active: var(--font-weight-bold);
   --menu-caret-size: var(--font-size-small);
-  --menu-caret-fill-color: var(--color-primary);
+  --menu-caret-fill-color: var(--brand-black);
   --menu-network-badge-font-color: var(--brand-white);
 
   /* Footer */
-  --footer-background-color: var(--brand-green);
+  --footer-background-color: var(--brand-black-light);
   --footer-font-color: var(--brand-white);
   --footer-font-color-highlight: var(--brand-black);
   --footer-link-category-font-color: var(--brand-white);
@@ -63,7 +63,7 @@
   --home-gaia-x-logo-size-height: 5rem;
 
   /* Input elements */
-  --input-font-color: var(--font-color-heading);
+  --input-font-color: var(--brand-black);
   --input-placeholder-font-color: var(--brand-grey);
   --input-disabled-font-color: var(--font-color-light);
   --input-border-color: var(--brand-grey-lighter);
@@ -73,24 +73,27 @@
   --input-background-highlight: var(--background-highlight);
   --input-selected-background: var(--checkbox-selected-background);
   --input-selected-border-size: var(--border-size);
-  --input-selected-border-color: var(--font-color-heading);
+  --input-selected-border-color: var(--brand-black);
 
   /* Buttons */
-  --button-border-radius: var(--border-radius);
-  --button-font-color: var(--brand-white);
-  --button-background: var(--brand-green);
-  --button-hover-font-color: var(--brand-white);
-  --button-hover-background: var(--brand-green);
+  --button-border-radius: 0px;
+  --button-font-color: var(--brand-black);
+  --button-background: var(--brand-white);
+  --button-hover-font-color: var(--brand-black);
+  --button-hover-background: var(--color-primary);
   --button-active-font-color: var(--brand-white);
   --button-active-background: var(--font-color-light);
-  --button-primary-font-color: var(--brand-white);
-  --button-primary-background: var(--brand-green);
+  --button-primary-font-color: var(--brand-black);
+  --button-primary-background: var(--brand-white);
+  --button-primary-border-color: var(--brand-black);
+  --button-primary-hover-background: var(--color-primary);
+  --button-primary-hover-border-color: var(--color-primary);
   --button-ghost-font-color: var(--color-primary);
   --button-ghost-background: var(--brand-white);
   --button-text-font-color: var(--color-highlight);
 
   /* Loading spinner */
-  --loader-border-color: var(--brand-blue);
+  --loader-border-color: var(--brand-red);
   --loader-top-border-color: transparent;
   --loader-border-size: var(--border-size);
   --loader-message-color: var(--color-secondary);
@@ -129,7 +132,7 @@
   --filter-clear-hover-color: var(--color-highlight);
 
   /* Confetti */
-  --confetti-color-one: var(--brand-blue);
+  --confetti-color-one: var(--brand-red);
   --confetti-color-two: var(--brand-green);
   --confetti-color-three: var(--brand-black);
   --confetti-color-four: var(--brand-grey-light);
