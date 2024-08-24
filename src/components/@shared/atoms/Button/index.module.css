@@ -39,11 +39,17 @@
   opacity: 0.25;
 }
 
-.primary,
+.primary {
+  border: var(--border-size) solid var(--button-primary-border-color);
+  background: var(--button-primary-background);
+}
+
 .primary:hover,
 .primary:focus,
 .primary:active {
-  background: var(--button-primary-background);
+  background: var(--button-primary-hover-background);
+  border-color: var(--button-primary-hover-border-color);
+  transform: none;
 }
 
 .ghost,
