@@ -1,5 +1,5 @@
 import classNames from 'classnames/bind'
-import React, { ReactElement, TouchEvent, useEffect, useState } from 'react'
+import { ReactElement, TouchEvent, useEffect, useState } from 'react'
 import styles from './index.module.css'
 
 const cx = classNames.bind(styles)

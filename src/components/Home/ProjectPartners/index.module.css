@@ -1,7 +1,27 @@
 .wrapper {
   margin: calc(var(--spacer) * 4) 0 0;
-  padding: var(--spacer) 0;
-  background: var(--background-highlight);
+}
+
+.wrapper > div:first-of-type {
+  margin-bottom: var(--spacer);
+}
+
+.container {
+  position: relative;
+  padding: calc(var(--spacer) * 2) 0;
+}
+
+/* Full width background color */
+.container:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  width: 100vw;
+  background: var(--brand-black);
+  z-index: -1;
 }
 
 .title {
@@ -17,10 +37,16 @@
   max-height: 8rem;
 }
 
-.logo {
+.logo,
+.whiteLogo {
   width: 100%;
+  max-width: 15rem;
   height: 100%;
   object-fit: contain;
+}
+
+.whiteLogo {
+  filter: brightness(500%) contrast(60%) saturate(0%) blur(0px) hue-rotate(0deg);
 }
 
 .footer {
