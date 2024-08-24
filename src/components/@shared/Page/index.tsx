@@ -47,6 +47,7 @@ export default function Page({
             description={description}
             isHome={isHome}
             showSearch={isHome}
+            underlinedTitle={isHome}
           />
         )}
         {children}
