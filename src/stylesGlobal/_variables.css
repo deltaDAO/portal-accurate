@@ -14,7 +14,7 @@
   --background-body-transparent: rgba(255, 255, 255, 0.8);
   --background-content: var(--brand-white);
   --background-highlight: var(--brand-grey-lighter);
-  --border-color: var(--brand-grey-lighter);
+  --border-color: var(--brand-black);
   --box-shadow-color: rgba(0, 0, 0, 0.05);
   --checkbox-selected-background: var(--color-primary);
   --bookmark-icon-fill-color: var(--brand-grey-light);
@@ -39,7 +39,7 @@
   --menu-mobile-navigation-border-color: var(--brand-grey-lighter);
   --menu-border-color: var(--brand-black);
   --menu-border-radius: var(--border-radius-sm);
-  --menu-border-size: var(--border-size);
+  --menu-border-size: var(--border-size-md);
   --menu-icon-fill-color: var(--brand-black);
   --menu-icon-fill-color-hover: var(--brand-black);
   --menu-title-font-size: var(--font-size-h4);
@@ -67,13 +67,13 @@
   --input-font-color: var(--brand-black);
   --input-placeholder-font-color: var(--brand-grey);
   --input-disabled-font-color: var(--font-color-light);
-  --input-border-color: var(--brand-grey-lighter);
-  --input-border-size: var(--border-size-sm);
+  --input-border-color: var(--brand-grey);
+  --input-border-size: var(--border-size-md);
   --input-border-radius: var(--border-radius);
   --input-background: var(--brand-white);
   --input-background-highlight: var(--background-highlight);
   --input-selected-background: var(--checkbox-selected-background);
-  --input-selected-border-size: var(--border-size);
+  --input-selected-border-size: var(--border-size-md);
   --input-selected-border-color: var(--brand-black);
 
   /* Buttons */
@@ -96,7 +96,7 @@
   /* Loading spinner */
   --loader-border-color: var(--brand-red);
   --loader-top-border-color: transparent;
-  --loader-border-size: var(--border-size);
+  --loader-border-size: var(--border-size-sm);
   --loader-message-color: var(--color-secondary);
 
   /* Box template */
@@ -112,7 +112,7 @@
   --teaser-title-font-color: var(--font-color-heading);
   --teaser-background: var(--background-content);
   --teaser-border-radius: var(--border-radius);
-  --teaser-border-size: var(--border-size-sm);
+  --teaser-border-size: var(--border-size-lg);
   --teaser-border-color: var(--border-color);
   --teaser-box-shadow: none;
   --teaser-hover-box-shadow: 0 10px 25px 0 var(--box-shadow-color);
@@ -164,10 +164,11 @@
   --line-height: 1.6;
 
   --spacer: 2rem;
-  --border-radius-sm: 0.3rem;
-  --border-radius: 0.3rem;
+  --border-radius-sm: 0px;
+  --border-radius: 0px;
   --border-size-sm: 1px;
-  --border-size: 2px;
+  --border-size-md: 2px;
+  --border-size-lg: 3px;
 
   --layout-max-width: 85rem;
   --checkbox-size: 1.6em;

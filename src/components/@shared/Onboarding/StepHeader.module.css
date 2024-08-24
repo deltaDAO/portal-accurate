@@ -4,8 +4,12 @@
   margin-bottom: var(--spacer);
 }
 
-.title,
+.header > div {
+  margin-bottom: calc(var(--spacer) / 2);
+  text-align: center;
+}
+
 .subtitle {
   text-align: center;
-  color: var(--color-primary);
+  color: var(--color-secondary);
 }

@@ -3,7 +3,7 @@
   justify-content: flex-start;
   align-items: center;
   padding-left: 0;
-  background-color: var(--color-primary);
+  background-color: var(--brand-black);
   color: var(--brand-white);
   border-radius: var(--border-radius) var(--border-radius) 0 0;
   box-shadow: var(--box-template-box-shadow);
@@ -18,11 +18,11 @@
   padding: calc(var(--spacer) / 8) calc(var(--spacer) / 4) 0;
   background-color: var(--brand-yellow);
   margin-bottom: 0;
-  color: var(--color-primary);
+  color: var(--brand-white);
 }
 
 .title {
-  color: var(--brand-white);
+  color: var(--color-primary);
 }
 
 .paragraph p {

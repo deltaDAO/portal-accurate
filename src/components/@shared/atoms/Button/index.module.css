@@ -40,7 +40,7 @@
 }
 
 .primary {
-  border: var(--border-size) solid var(--button-primary-border-color);
+  border: var(--border-size-md) solid var(--button-primary-border-color);
   background: var(--button-primary-background);
 }
 
