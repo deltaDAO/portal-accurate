@@ -46,9 +46,6 @@
 }
 
 .input:focus {
-  /* prevent the placeholder to move when increasing the border size*/
-  padding-left: calc(var(--button-size) - 1px);
-
   border: var(--input-selected-border-size) solid
     var(--input-selected-border-color);
 }
