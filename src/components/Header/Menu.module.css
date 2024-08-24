@@ -36,7 +36,7 @@
   margin-left: auto;
 }
 
-@media screen and (min-width: 75rem) {
+@media screen and (min-width: 80rem) {
   .navigation {
     order: 2;
     width: auto;
@@ -50,7 +50,7 @@
   }
 }
 
-@media screen and (min-width: 75rem) {
+@media screen and (min-width: 80rem) {
   .menu {
     padding: calc(var(--spacer) / 1.5);
   }
@@ -127,7 +127,7 @@
 }
 
 .active:after {
-  background-color: var(--menu-font-color-active);
+  background-color: var(--menu-font-color-hover);
 }
 
 .link[aria-disabled] {
@@ -153,11 +153,13 @@ svg.caret {
   margin-left: calc(var(--spacer) / 4);
 }
 
-[aria-expanded='true'] .caret {
+[aria-expanded='true'] .caret,
+[aria-expanded='true'] svg.caret {
+  fill: var(--menu-caret-active-fill-color);
   transform: rotate(180deg);
 }
 
-@media screen and (min-width: 75rem) {
+@media screen and (min-width: 80rem) {
   .caret,
   svg.caret {
     display: inline-block;

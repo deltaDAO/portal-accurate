@@ -48,6 +48,7 @@
   --menu-link-font-weight-active: var(--font-weight-bold);
   --menu-caret-size: var(--font-size-small);
   --menu-caret-fill-color: var(--brand-black);
+  --menu-caret-active-fill-color: var(--color-primary);
   --menu-network-badge-font-color: var(--brand-white);
 
   /* Footer */
@@ -133,7 +134,7 @@
 
   /* Confetti */
   --confetti-color-one: var(--brand-red);
-  --confetti-color-two: var(--brand-green);
+  --confetti-color-two: var(--brand-grey);
   --confetti-color-three: var(--brand-black);
   --confetti-color-four: var(--brand-grey-light);
   --confetti-color-five: var(--brand-grey-lighter);

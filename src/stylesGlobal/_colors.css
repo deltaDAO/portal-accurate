@@ -11,8 +11,8 @@
     var(--brand-red)
   );
 
-  --brand-grey: #dbdbdb;
-  --brand-grey-light: #ddd;
+  --brand-grey: #c5c5c5;
+  --brand-grey-light: #dbdbdb;
   --brand-grey-lighter: #ededed;
 
   --brand-alert-green: #5fb359;
