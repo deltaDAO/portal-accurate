@@ -24,7 +24,7 @@ export default function Footer(): ReactElement {
               <img
                 className={styles.logo}
                 alt={`Logo`}
-                src={`/images/EU-co-funded.png`}
+                src={`/images/eu-funded.webp`}
               />
               <Markdown className={styles.notice} text={notice} />
             </div>
