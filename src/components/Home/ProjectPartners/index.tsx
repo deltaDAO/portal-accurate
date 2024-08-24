@@ -22,7 +22,7 @@ export const ProjectPartners = (): ReactElement => {
   return (
     <div className={styles.wrapper}>
       <div className={cx({ underlinedTitle: true })}>
-        <h3 className={styles.title}>These partners work with us</h3>
+        <h2 className={styles.title}>These partners work with us</h2>
       </div>
       <Container className={styles.container}>
         <Carousel show={4}>

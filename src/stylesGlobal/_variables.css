@@ -109,7 +109,7 @@
 
   /* Asset teaser */
   --teaser-font-color: var(--brand-black);
-  --teaser-title-font-color: var(--font-color-heading);
+  --teaser-title-font-color: var(--brand-black);
   --teaser-background: var(--background-content);
   --teaser-border-radius: var(--border-radius);
   --teaser-border-size: var(--border-size-lg);
