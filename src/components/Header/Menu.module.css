@@ -153,9 +153,7 @@ svg.caret {
   margin-left: calc(var(--spacer) / 4);
 }
 
-[aria-expanded='true'] .caret,
-[aria-expanded='true'] svg.caret {
-  fill: var(--menu-caret-active-fill-color);
+[aria-expanded='true'] .caret {
   transform: rotate(180deg);
 }
 
