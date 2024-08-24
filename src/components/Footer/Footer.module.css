@@ -20,6 +20,7 @@
   text-align: left;
   margin-bottom: 0;
   font-weight: bold;
+  font-size: var(--font-size-large);
 }
 
 .main {

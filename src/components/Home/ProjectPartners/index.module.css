@@ -1,5 +1,5 @@
 .wrapper {
-  margin: calc(var(--spacer) * 4) 0 0;
+  margin: calc(var(--spacer) * 3) 0 0;
 }
 
 .wrapper > div:first-of-type {

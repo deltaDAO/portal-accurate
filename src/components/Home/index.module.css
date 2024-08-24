@@ -1,5 +1,5 @@
 .section {
-  margin-top: calc(var(--spacer) * 2);
+  margin-top: calc(var(--spacer) * 3);
 }
 
 .section h3 {
@@ -19,20 +19,37 @@
   margin-top: var(--spacer);
 }
 
-.poweredby {
-  display: block;
-  text-align: center;
-  margin: calc(var(--spacer) * 4) auto 0;
+.poweredBySection {
+  position: relative;
+  margin-bottom: calc(var(--spacer) * -2);
+  padding: var(--spacer) 0;
 }
 
-.poweredby svg {
+.poweredBySection:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  width: 100vw;
+  background: var(--color-primary);
+  z-index: -1;
+}
+
+.poweredBy {
+  display: block;
+  text-align: center;
+}
+
+.poweredBy svg {
   width: 12rem;
   height: 6rem;
   margin: 0 auto;
 }
 
-.poweredby p {
+.poweredBy p {
   font-weight: bold;
-  color: var(--color-primary);
+  color: var(--brand-white);
   margin: 0;
 }
