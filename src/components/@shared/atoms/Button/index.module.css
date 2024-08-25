@@ -44,6 +44,7 @@
 .primary:active {
   border: var(--border-size-md) solid var(--button-primary-border-color);
   background: var(--button-primary-background);
+  transform: none;
 }
 
 .primary:hover {

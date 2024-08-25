@@ -13,11 +13,11 @@
   --background-body: var(--brand-white);
   --background-body-transparent: rgba(255, 255, 255, 0.8);
   --background-content: var(--brand-white);
-  --background-highlight: var(--brand-grey-light);
+  --background-highlight: var(--brand-grey);
   --border-color: var(--brand-black);
   --box-shadow-color: rgba(0, 0, 0, 0.05);
   --checkbox-selected-background: var(--color-primary);
-  --bookmark-icon-fill-color: var(--brand-grey-light);
+  --bookmark-icon-fill-color: var(--brand-grey);
   --bookmark-icon-selected-fill-color: var(--color-primary);
   --link-font-color: var(--color-highlight);
   --nft-refresh-icon-fill: var(--brand-white);

@@ -175,7 +175,7 @@ export default function FilesInput(props: InputProps): ReactElement {
               </div>
 
               <Button
-                style="primary"
+                style="ghost"
                 onClick={(e: React.SyntheticEvent) => {
                   e.preventDefault()
                   handleValidation(e, field.value[0].url)
