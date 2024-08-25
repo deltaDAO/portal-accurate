@@ -3,7 +3,8 @@
   font-family: var(--font-family-base);
   font-weight: var(--font-weight-bold);
   color: var(--input-font-color);
-  border: var(--input-border-size) solid var(--input-border-color);
+  border: none;
+  border-bottom: var(--input-border-size) solid var(--input-border-color);
   box-shadow: none;
   width: 100%;
   background: var(--background-content);
@@ -51,6 +52,7 @@
 .textarea {
   composes: input;
   height: auto;
+  border: var(--input-border-size) solid var(--input-border-color);
 }
 
 .select {
@@ -109,7 +111,7 @@
 
 .prefix,
 .postfix {
-  border: 1px solid var(--input-border-color);
+  border-bottom: 1px solid var(--input-border-color);
   height: 43px;
   display: flex;
   align-items: center;

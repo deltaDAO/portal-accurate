@@ -65,9 +65,9 @@
 
   /* Input elements */
   --input-font-color: var(--brand-black);
-  --input-placeholder-font-color: var(--brand-black);
+  --input-placeholder-font-color: var(--brand-grey-dark);
   --input-disabled-font-color: var(--font-color-light);
-  --input-border-color: var(--brand-black);
+  --input-border-color: var(--brand-grey);
   --input-border-size: var(--border-size-md);
   --input-border-radius: var(--border-radius);
   --input-background: var(--brand-white);
@@ -97,7 +97,7 @@
   /* Loading spinner */
   --loader-border-color: var(--brand-red);
   --loader-top-border-color: transparent;
-  --loader-border-size: var(--border-size-sm);
+  --loader-border-size: var(--border-size-md);
   --loader-message-color: var(--color-secondary);
 
   /* Box template */
@@ -113,14 +113,14 @@
   --teaser-title-font-color: var(--brand-black);
   --teaser-background: var(--background-content);
   --teaser-border-radius: var(--border-radius);
-  --teaser-border-size: var(--border-size-lg);
+  --teaser-border-size: var(--border-size-md);
   --teaser-border-color: var(--border-color);
   --teaser-box-shadow: none;
   --teaser-hover-box-shadow: 0 10px 25px 0 var(--box-shadow-color);
 
   /* Pagination component */
   --pagination-font-color: var(--brand-black);
-  --pagination-selected-font-color: var(--color-secondary);
+  --pagination-selected-font-color: var(--color-highlight);
   --pagination-hover-font-color: var(--color-highlight);
 
   /* Filter and sort */

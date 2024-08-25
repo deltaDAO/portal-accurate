@@ -74,10 +74,12 @@ export default function TagsAutoComplete({
       defaultValue={defaultTags}
       hideSelectedOptions
       isMulti
+      // menuIsOpen
       isClearable={false}
       noOptionsMessage={() =>
         'Start typing to get suggestions based on tags from all published assets.'
       }
+      // inputValue="test"
       onChange={(value: AutoCompleteOption[]) => handleChange(value)}
       onInputChange={(value) => handleOptionsFilter(tagsList, value)}
       openMenuOnClick
