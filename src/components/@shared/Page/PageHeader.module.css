@@ -3,6 +3,10 @@
   max-width: 50rem;
 }
 
+.header > div {
+  padding-left: 0;
+}
+
 .title {
   font-size: var(--font-size-h3);
   margin-top: 0;

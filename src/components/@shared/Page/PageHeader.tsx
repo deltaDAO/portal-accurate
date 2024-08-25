@@ -12,28 +12,37 @@ export default function PageHeader({
   center,
   description,
   isHome,
-  showSearch,
-  underlinedTitle
+  showSearch
 }: {
   title: string | ReactElement
   center?: boolean
   description?: string
   isHome?: boolean
   showSearch?: boolean
-  underlinedTitle?: boolean
 }): ReactElement {
   const styleClasses = cx({
     header: true,
-    center,
-    underlinedTitle
+    center
   })
 
   return (
     <header className={styleClasses}>
       <Container className={isHome && styles.homeTitleContainer}>
-        <h1 className={styles.title}>{title}</h1>
+        <div
+          className={cx({
+            underlinedTitle: true
+          })}
+        >
+          <h1 className={styles.title}>{title}</h1>
+        </div>
         {description && (
-          <Markdown text={description} className={styles.description} />
+          <div
+            className={cx({
+              underlinedTitle: isHome
+            })}
+          >
+            <Markdown text={description} className={styles.description} />
+          </div>
         )}
         {showSearch && (
           <div className={styles.search}>
