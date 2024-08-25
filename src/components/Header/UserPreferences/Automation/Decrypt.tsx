@@ -55,7 +55,9 @@ export default function Decrypt(): ReactElement {
               type="password"
               ref={passwordInputRef}
             />
-            <Button type="submit">Decrypt</Button>
+            <Button style="ghost" type="submit">
+              Decrypt
+            </Button>
           </form>
           <span className={styles.help}>
             Enter the password that was used to encrypt this wallet.

@@ -73,7 +73,7 @@ export default function Import(): ReactElement {
         </>
       ) : (
         <Button
-          style="primary"
+          style="ghost"
           onClick={() => setShowFileInput(true)}
           disabled={isLoading}
           className={styles.button}

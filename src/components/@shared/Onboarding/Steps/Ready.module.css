@@ -12,11 +12,11 @@
 
 .body p {
   margin-bottom: 0;
-  color: var(--brand-grey);
+  color: var(--brand-grey-dark);
 }
 
 .body div {
-  border-color: var(--brand-grey);
+  border-color: var(--brand-grey-dark);
 }
 
 .image {
