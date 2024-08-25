@@ -13,7 +13,7 @@
   --background-body: var(--brand-white);
   --background-body-transparent: rgba(255, 255, 255, 0.8);
   --background-content: var(--brand-white);
-  --background-highlight: var(--brand-grey);
+  --background-highlight: var(--brand-white);
   --border-color: var(--brand-black);
   --box-shadow-color: rgba(0, 0, 0, 0.05);
   --checkbox-selected-background: var(--color-primary);
@@ -103,7 +103,7 @@
   /* Box template */
   --box-template-background: var(--background-content);
   --box-template-border-radius: var(--border-radius);
-  --box-template-border-size: var(--border-size-sm);
+  --box-template-border-size: var(--border-size-md);
   --box-template-border-color: var(--border-color);
   --box-template-box-shadow: none;
   --box-template-hover-box-shadow: 0 10px 25px 0 var(--box-shadow-color);
