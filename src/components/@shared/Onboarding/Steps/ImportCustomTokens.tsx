@@ -1,15 +1,15 @@
-import { tokenLogos } from '@components/Header/Wallet/AddTokenList'
-import { useMarketMetadata } from '@context/MarketMetadata'
-import { getErrorMessage } from '@utils/onboarding'
-import { addTokenToWallet } from '@utils/wallet'
-import { getSupportedChainIds } from 'chains.config'
 import { ReactElement, useState } from 'react'
 import { toast } from 'react-toastify'
-import { useAccount, useNetwork, useProvider } from 'wagmi'
 import { OnboardingStep } from '..'
-import content from '../../../../../content/onboarding/steps/importCustomTokens.json'
 import StepBody from '../StepBody'
 import StepHeader from '../StepHeader'
+import content from '../../../../../content/onboarding/steps/importCustomTokens.json'
+import { useAccount, useNetwork, useProvider } from 'wagmi'
+import { addTokenToWallet } from '@utils/wallet'
+import { getErrorMessage } from '@utils/onboarding'
+import { tokenLogos } from '@components/Header/Wallet/AddTokenList'
+import { useMarketMetadata } from '@context/MarketMetadata'
+import { getSupportedChainIds } from '../../../../../chains.config'
 
 export default function ImportCustomTokens(): ReactElement {
   const { title, subtitle, body, image }: OnboardingStep = content
@@ -31,8 +31,10 @@ export default function ImportCustomTokens(): ReactElement {
   ) => {
     setLoading(true)
     try {
-      if (!getSupportedChainIds().includes(chain?.id)) throw new Error()
-
+      if (!getSupportedChainIds().includes(chain?.id))
+        throw new Error(
+          'The chain you are connected to with your wallet is not supported'
+        )
       await addTokenToWallet(
         tokenAddress,
         tokenSymbol,
@@ -54,21 +56,23 @@ export default function ImportCustomTokens(): ReactElement {
     }
   }
 
-  const actions = approvedBaseTokens?.map((token) => ({
-    buttonLabel: `Import ${token.symbol} Token`,
-    buttonAction: async () => {
-      await importCustomToken(
-        web3Provider,
-        token.address,
-        token.symbol,
-        token.decimals,
-        tokenLogos?.[token.symbol]?.url
-      )
-    },
-    successMessage: `Successfully imported ${token.symbol} test token`,
-    loading,
-    completed
-  }))
+  const actions = approvedBaseTokens
+    ?.filter((token) => token.symbol.toLowerCase().includes('euro'))
+    .map((token) => ({
+      buttonLabel: `Import ${token.symbol} Token`,
+      buttonAction: async () => {
+        await importCustomToken(
+          web3Provider,
+          token.address,
+          token.symbol,
+          token.decimals,
+          tokenLogos?.[token.symbol]?.url
+        )
+      },
+      successMessage: `Successfully imported ${token.symbol} test token`,
+      loading,
+      completed
+    }))
 
   return (
     <div>
