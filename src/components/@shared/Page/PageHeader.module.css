@@ -36,7 +36,7 @@
 }
 
 .homeTitleContainer:after {
-  background: #9d9d9d40;
+  background: #ffffff45;
 }
 
 .homeTitleContainer {
@@ -54,6 +54,7 @@
 }
 
 .homeTitleContainer h1 {
+  font-size: 3.5rem;
   color: var(--color-primary);
   margin-bottom: 0;
 }
