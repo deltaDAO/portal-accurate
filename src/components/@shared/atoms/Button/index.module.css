@@ -24,7 +24,6 @@
   color: var(--button-hover-font-color);
   background: var(--button-hover-background);
   text-decoration: none;
-  transform: translate3d(0, 0.05rem, 0);
 }
 
 .button:active {
