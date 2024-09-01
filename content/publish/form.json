@@ -6,7 +6,7 @@
         "name": "nft",
         "label": "Data NFT",
         "type": "nft",
-        "help": "All metadata is stored on-chain in a newly deployed ERC-721 contract representing this asset, created with this name, symbol, description and image.",
+        "help": "Data NFTs are unique digital assets that represent the intellectual property of your digital services, enabling flexible licensing arrangements and enhanced control over your valuable business data. Each Data NFT can issue multiple access tokens with customized terms, enabling varied access levels and durations for your digital service.",
         "required": true
       },
       {

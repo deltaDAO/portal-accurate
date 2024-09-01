@@ -47,8 +47,8 @@ function encodeSvg(svgString: string): string {
 }
 
 const nftMetadataTemplate = {
-  name: 'GX Data NFT',
-  symbol: 'GX-NFT',
+  name: 'PX Data NFT',
+  symbol: 'PX-NFT',
   description: `This NFT represents an asset in Ocean Protocol v4 ecosystems.`,
   external_url: 'https://minimal-gaia-x.eu'
 }
