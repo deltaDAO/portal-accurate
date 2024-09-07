@@ -5,7 +5,7 @@ import { getOceanConfig } from './ocean'
 import { OrdersData_orders as OrdersData } from '../@types/subgraph/OrdersData'
 import { OpcFeesQuery as OpcFeesData } from '../@types/subgraph/OpcFeesQuery'
 import appConfig from '../../app.config'
-import { chains } from 'chains.config'
+import { chains } from '../../chains.config'
 import { ethers } from 'ethers'
 
 const UserTokenOrders = gql`
