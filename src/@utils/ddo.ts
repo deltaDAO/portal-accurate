@@ -46,6 +46,8 @@ export function mapTimeoutStringToSeconds(timeout: string): number {
   switch (timeout) {
     case 'Forever':
       return 0
+    case '1 hour':
+      return 3600
     case '1 day':
       return 86400
     case '1 week':
