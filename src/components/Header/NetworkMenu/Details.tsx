@@ -30,8 +30,13 @@ export default function Details(): ReactElement {
                 />
               )
             })}
-          {activeConnector?.name === 'MetaMask' && <AddTokenList />}
         </li>
+        {activeConnector?.name === 'MetaMask' && (
+          <li className={styles.tokens}>
+            <div title="Tokens">Tokens</div>
+            <AddTokenList />
+          </li>
+        )}
       </ul>
     </div>
   )
