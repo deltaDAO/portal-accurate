@@ -13,6 +13,7 @@ import Preview from './Preview'
 import Submission from './Submission'
 import { ServiceComputeOptions } from '@oceanprotocol/lib'
 import contentFeedback from '../../../content/publish/feedback.json'
+import PoliciesFields from './Policies'
 
 export const wizardSteps: StepContent[] = [
   {
@@ -27,16 +28,21 @@ export const wizardSteps: StepContent[] = [
   },
   {
     step: 3,
+    title: content.policies.title,
+    component: <PoliciesFields />
+  },
+  {
+    step: 4,
     title: content.pricing.title,
     component: <PricingFields />
   },
   {
-    step: 4,
+    step: 5,
     title: content.preview.title,
     component: <Preview />
   },
   {
-    step: 5,
+    step: 6,
     title: content.submission.title,
     component: <Submission />
   }
