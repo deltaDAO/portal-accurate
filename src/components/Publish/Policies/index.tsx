@@ -8,19 +8,19 @@ export default function PoliciesFields(): ReactElement {
   return (
     <>
       <Field
-        {...getFieldContent('timeout', content.services.fields)}
+        {...getFieldContent('timeout', content.policies.fields)}
         component={Input}
-        name="services[0].timeout"
+        name="policies.timeout"
       />
       <Field
-        {...getFieldContent('allow', content.services.fields)}
+        {...getFieldContent('allow', content.policies.fields)}
         component={Input}
-        name="services[0].allow"
+        name="policies.allow"
       />
       <Field
-        {...getFieldContent('deny', content.services.fields)}
+        {...getFieldContent('deny', content.policies.fields)}
         component={Input}
-        name="services[0].deny"
+        name="policies.deny"
       />
 
       {/*

@@ -97,6 +97,12 @@ export function transformConsumerParameters(
   return transformedValues as ConsumerParameter[]
 }
 
+export function normalizeSaasPaymentMode(paymentMode: string): string {
+  if (!paymentMode) return
+
+  return paymentMode.replace(' ', '').toLowerCase()
+}
+
 export function generateCredentials(
   oldCredentials: Credentials,
   updatedAllow: string[],
@@ -133,7 +139,7 @@ export async function transformPublishFormToDdo(
   datatokenAddress?: string,
   nftAddress?: string
 ): Promise<DDO> {
-  const { metadata, services, user } = values
+  const { metadata, services, policies, user } = values
   const { chainId, accountId } = user
   const {
     type,
@@ -149,10 +155,11 @@ export async function transformPublishFormToDdo(
     dockerImageCustomChecksum,
     usesConsumerParameters,
     consumerParameters,
-    gaiaXInformation
+    gaiaXInformation,
+    saas
   } = metadata
-  const { access, files, links, providerUrl, timeout, allow, deny } =
-    services[0]
+  const { access, files, links, providerUrl } = services[0]
+  const { timeout, allow, deny } = policies
 
   const did = nftAddress ? generateDid(nftAddress, chainId) : '0x...'
   const currentTime = dateToStringNoMS(new Date())
@@ -168,6 +175,14 @@ export async function transformPublishFormToDdo(
     files[0].valid && [sanitizeUrl(files[0].url)]
   const linksTransformed = links?.length &&
     links[0].valid && [sanitizeUrl(links[0].url)]
+
+  const saasDetails =
+    files[0].type === 'saas'
+      ? {
+          redirectUrl: sanitizeUrl(links[0].url),
+          paymentMode: normalizeSaasPaymentMode(saas.paymentMode)
+        }
+      : {}
 
   const consumerParametersTransformed = usesConsumerParameters
     ? transformConsumerParameters(consumerParameters)
@@ -199,7 +214,8 @@ export async function transformPublishFormToDdo(
           PIIInformation: gaiaXInformation.PIIInformation
         }),
         serviceSD: gaiaXInformation?.serviceSD
-      }
+      },
+      saas: saasDetails
     },
     ...(type === 'algorithm' &&
       dockerImage !== '' && {
@@ -240,7 +256,7 @@ export async function transformPublishFormToDdo(
   const filesEncrypted =
     !isPreview &&
     files?.length &&
-    files[0].valid &&
+    (files[0].valid || files[0].type === 'saas') &&
     (await getEncryptedFiles(file, chainId, providerUrl.url))
 
   const newService: Service = {

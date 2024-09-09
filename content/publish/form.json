@@ -173,30 +173,20 @@
         "type": "tabs",
         "fields": [
           {
-            "value": "ipfs",
-            "title": "IPFS",
-            "label": "CID",
-            "placeholder": "e.g. bafkreidgvpkjawlxz6sffxzwgooowe5yt7i6wsyg236mfoks77nywkptdq",
-            "help": "This CID will be stored encrypted after publishing.",
+            "value": "url",
+            "title": "URL",
+            "label": "File",
+            "placeholder": "e.g. https://file.com/file.json",
+            "help": "This URL will be stored encrypted after publishing. **Please make sure that the endpoint is accessible over the internet and is not protected by a firewall or by credentials.**",
             "computeHelp": "For a compute dataset, your file should match the file type required by the algorithm, and should not exceed 1 GB in file size. ",
             "prominentHelp": true,
             "type": "files",
-            "required": true
-          },
-          {
-            "value": "arweave",
-            "title": "Arweave",
-            "label": "Transaction ID",
-            "placeholder": "e.g. DBRCL94j3QqdPaUtt4VWRen8rZfJZBb7Ey40iMpXfhtd",
-            "help": "This Transaction ID will be stored encrypted after publishing.",
-            "computeHelp": "For a compute dataset, your file should match the file type required by the algorithm, and should not exceed 1 GB in file size. ",
-            "prominentHelp": true,
-            "type": "files",
-            "required": true
+            "required": true,
+            "methods": false
           },
           {
             "value": "url",
-            "title": "URL",
+            "title": "API",
             "label": "File",
             "placeholder": "e.g. https://file.com/file.json",
             "help": "This URL will be stored encrypted after publishing. **Please make sure that the endpoint is accessible over the internet and is not protected by a firewall or by credentials.**",
@@ -214,6 +204,29 @@
                 "help": "This HEADERS will be stored encrypted after publishing.",
                 "type": "headers",
                 "required": false
+              }
+            ]
+          },
+          {
+            "value": "saas",
+            "title": "SaaS",
+            "label": "Redirect URL",
+            "placeholder": "e.g. https://delta-dao/the-future-is-now",
+            "help": "The url the user will be redirected to after buying access to the SaaS.",
+            "prominentHelp": true,
+            "type": "saas",
+            "required": true,
+            "methods": false,
+            "innerFields": [
+              {
+                "value": "paymentMode",
+                "title": "PaymentMode",
+                "label": "PaymentMode",
+                "help": "Choose how the payment mode for your Saas.",
+                "type": "select",
+                "selected": "",
+                "options": ["Subscription", "Pay per use"],
+                "required": true
               }
             ]
           },
@@ -247,6 +260,17 @@
                 "required": true
               }
             ]
+          },
+          {
+            "value": "ipfs",
+            "title": "IPFS",
+            "label": "CID",
+            "placeholder": "e.g. bafkreidgvpkjawlxz6sffxzwgooowe5yt7i6wsyg236mfoks77nywkptdq",
+            "help": "This CID will be stored encrypted after publishing.",
+            "computeHelp": "For a compute dataset, your file should match the file type required by the algorithm, and should not exceed 1 GB in file size. ",
+            "prominentHelp": true,
+            "type": "files",
+            "required": true
           }
         ],
         "sortOptions": false,
@@ -290,6 +314,20 @@
         "disclaimer": "Please do not provide downloadable personal data without the consent of the data subjects.",
         "disclaimerValues": ["Download"]
       },
+
+      {
+        "name": "usesConsumerParameters",
+        "label": "User defined parameters",
+        "help": "User defined parameters are used to filter or query the published asset.",
+        "type": "checkbox",
+        "options": ["This asset uses user defined parameters"],
+        "required": false
+      }
+    ]
+  },
+  "policies": {
+    "title": "Policies",
+    "fields": [
       {
         "name": "timeout",
         "label": "Access Period",
@@ -307,14 +345,6 @@
         "required": true
       },
       {
-        "name": "usesConsumerParameters",
-        "label": "User defined parameters",
-        "help": "User defined parameters are used to filter or query the published asset.",
-        "type": "checkbox",
-        "options": ["This asset uses user defined parameters"],
-        "required": false
-      },
-      {
         "name": "allow",
         "label": "Allow Wallet Address",
         "placeholder": "e.g. 0xe328aB96B7CbB55A6E1c1054678137bA09780acA",
@@ -329,9 +359,6 @@
         "type": "credentials"
       }
     ]
-  },
-  "policies": {
-    "title": "Policies"
   },
   "pricing": {
     "title": "Pricing",

@@ -86,14 +86,14 @@ export const initialValues: FormPublishData = {
       containsPII: false,
       PIIInformation: undefined,
       serviceSD: { url: '' }
-    }
+    },
+    saas: { paymentMode: 'Pay per use' }
   },
   services: [
     {
-      files: [{ url: '', type: 'ipfs' }],
+      files: [{ url: '', type: 'url' }],
       links: [{ url: '', type: 'url' }],
       dataTokenOptions: { name: '', symbol: '' },
-      timeout: '',
       access: 'access',
       providerUrl: {
         url: 'https://provider.mainnet.oceanprotocol.com',
@@ -102,11 +102,14 @@ export const initialValues: FormPublishData = {
       },
       computeOptions,
       usesConsumerParameters: false,
-      consumerParameters: [],
-      allow: [],
-      deny: []
+      consumerParameters: []
     }
   ],
+  policies: {
+    timeout: '',
+    allow: [],
+    deny: []
+  },
   pricing: {
     baseToken: { address: '', name: '', symbol: 'OCEAN', decimals: 18 },
     price: 0,

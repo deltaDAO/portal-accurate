@@ -158,6 +158,16 @@ export function normalizeFile(
       } as Smartcontract
       break
     }
+    case 'saas': {
+      fileObj = {
+        type: 'url',
+        index: 0,
+        url: file ? file[0]?.url || file?.url : null,
+        headers: headersProvider,
+        method: file.method
+      } as UrlFile
+      break
+    }
     default: {
       fileObj = {
         type: 'url',

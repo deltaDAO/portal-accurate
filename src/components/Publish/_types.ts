@@ -7,7 +7,6 @@ import { GaiaXInformation2210 } from '../../@types/gaia-x/2210/GXInformation'
 export interface FormPublishService {
   files: FileInfo[]
   links?: FileInfo[]
-  timeout: string
   dataTokenOptions: { name: string; symbol: string }
   access: 'Download' | 'Compute' | string
   providerUrl: { url: string; valid: boolean; custom: boolean }
@@ -15,8 +14,6 @@ export interface FormPublishService {
   computeOptions?: ServiceComputeOptions
   usesConsumerParameters?: boolean
   consumerParameters?: FormConsumerParameter[]
-  allow?: string[]
-  deny?: string[]
 }
 
 export interface FormPublishData {
@@ -39,6 +36,7 @@ export interface FormPublishData {
       PIIInformation?: GaiaXInformation2210['PIIInformation']
       serviceSD?: ServiceCredential
     }
+    saas: { paymentMode?: 'Subscription' | 'Pay per use' }
     license?: string
     tags?: string[]
     dockerImage?: string
@@ -54,6 +52,11 @@ export interface FormPublishData {
     }
   }
   services: FormPublishService[]
+  policies: {
+    timeout: string
+    allow?: string[]
+    deny?: string[]
+  }
   pricing: PricePublishOptions
   feedback?: PublishFeedback
 }
