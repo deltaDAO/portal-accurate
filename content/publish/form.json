@@ -215,6 +215,7 @@
             "help": "The url the user will be redirected to after buying access to the SaaS.",
             "prominentHelp": true,
             "type": "saas",
+            "fieldFormPrefix": "metadata.saas",
             "required": true,
             "methods": false,
             "innerFields": [

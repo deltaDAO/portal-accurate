@@ -87,7 +87,9 @@ export const initialValues: FormPublishData = {
       PIIInformation: undefined,
       serviceSD: { url: '' }
     },
-    saas: { paymentMode: 'Pay per use' }
+    saas: {
+      paymentMode: 'Subscription'
+    }
   },
   services: [
     {

@@ -33,7 +33,7 @@ export default function FilesInput(props: InputProps): ReactElement {
   const abi = field.value[0].abi || undefined
   const headers = field.value[0].headers || undefined
   const method = field.value[0].method || undefined
-  const [paymentModeField] = useField('metadata.saas.paymentMode')
+  const [paymentModeField] = useField(`${props.fieldFormPrefix}.paymentMode`)
 
   async function handleValidation(e: React.SyntheticEvent, url: string) {
     // File example 'https://oceanprotocol.com/tech-whitepaper.pdf'
@@ -169,7 +169,7 @@ export default function FilesInput(props: InputProps): ReactElement {
                         {...innerField}
                         name={
                           storageType === 'saas'
-                            ? `metadata.saas.${innerField.value}`
+                            ? `${props.fieldFormPrefix}.${innerField.value}`
                             : `${field.name}[0].${innerField.value}`
                         }
                         value={
