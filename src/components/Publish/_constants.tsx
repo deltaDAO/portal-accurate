@@ -3,6 +3,7 @@ import {
   FormPublishData,
   MetadataAlgorithmContainer,
   PublishFeedback,
+  SAAS_PAYMENT_MODE,
   StepContent
 } from './_types'
 import content from '../../../content/publish/form.json'
@@ -88,7 +89,7 @@ export const initialValues: FormPublishData = {
       serviceSD: { url: '' }
     },
     saas: {
-      paymentMode: 'Subscription'
+      paymentMode: SAAS_PAYMENT_MODE.SUBSCRIPTION
     }
   },
   services: [
