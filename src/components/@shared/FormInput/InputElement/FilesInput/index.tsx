@@ -103,7 +103,7 @@ export default function FilesInput(props: InputProps): ReactElement {
   function handleClose() {
     helpers.setTouched(false)
     helpers.setValue([
-      { url: '', type: storageType === 'hidden' ? 'ipfs' : storageType }
+      { url: '', type: storageType === 'hidden' ? 'url' : storageType }
     ])
   }
 

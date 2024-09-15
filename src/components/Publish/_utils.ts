@@ -97,12 +97,6 @@ export function transformConsumerParameters(
   return transformedValues as ConsumerParameter[]
 }
 
-export function normalizeSaasPaymentMode(paymentMode: string): string {
-  if (!paymentMode) return
-
-  return paymentMode.replace(' ', '').toLowerCase()
-}
-
 export function generateCredentials(
   oldCredentials: Credentials,
   updatedAllow: string[],
@@ -179,8 +173,8 @@ export async function transformPublishFormToDdo(
   const saasDetails =
     files[0].type === 'saas'
       ? {
-          redirectUrl: sanitizeUrl(links[0].url),
-          paymentMode: normalizeSaasPaymentMode(saas.paymentMode)
+          redirectUrl: sanitizeUrl(files[0].url),
+          paymentMode: saas.paymentMode
         }
       : {}
 

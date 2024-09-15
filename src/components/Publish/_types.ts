@@ -4,6 +4,11 @@ import { ReactElement } from 'react'
 import { ServiceCredential } from 'src/@types/gaia-x/2210/ServiceCredential'
 import { GaiaXInformation2210 } from '../../@types/gaia-x/2210/GXInformation'
 
+export enum SAAS_PAYMENT_MODE {
+  SUBSCRIPTION = 'Subscription',
+  PAY_PER_USE = 'Pay per use'
+}
+
 export interface FormPublishService {
   files: FileInfo[]
   links?: FileInfo[]
@@ -36,7 +41,7 @@ export interface FormPublishData {
       PIIInformation?: GaiaXInformation2210['PIIInformation']
       serviceSD?: ServiceCredential
     }
-    saas: { paymentMode?: 'Subscription' | 'Pay per use' }
+    saas: { paymentMode?: SAAS_PAYMENT_MODE }
     license?: string
     tags?: string[]
     dockerImage?: string

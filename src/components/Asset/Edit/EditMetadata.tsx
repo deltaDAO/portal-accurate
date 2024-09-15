@@ -169,7 +169,17 @@ export default function Edit({
           asset.services[0].serviceEndpoint
         )
         updatedFiles = filesEncrypted
+
+        const saasDetails =
+          values.files[0].type === 'saas'
+            ? {
+                redirectUrl: sanitizeUrl(values.files[0].url),
+                paymentMode: values.saas.paymentMode
+              }
+            : {}
+        updatedMetadata.additionalInformation.saas = saasDetails
       }
+
       const updatedService: Service = {
         ...asset.services[0],
         timeout: mapTimeoutStringToSeconds(values.timeout),
