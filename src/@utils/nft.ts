@@ -49,8 +49,8 @@ function encodeSvg(svgString: string): string {
 const nftMetadataTemplate = {
   name: 'PX Data NFT',
   symbol: 'PX-NFT',
-  description: `This NFT represents an asset in Ocean Protocol v4 ecosystems.`,
-  external_url: 'https://minimal-gaia-x.eu'
+  description: `Data NFTs are unique digital assets that represent the intellectual property of your digital services.`,
+  external_url: 'https://portal.pontus-x.eu'
 }
 
 export function generateNftMetadata(): NftMetadata {

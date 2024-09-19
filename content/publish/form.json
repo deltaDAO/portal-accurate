@@ -160,7 +160,7 @@
       },
       {
         "name": "providerUrl",
-        "label": "Provider URL",
+        "label": "Access Controller URL",
         "type": "providerUrl",
         "help": "Enter the URL for your custom [provider](https://github.com/oceanprotocol/provider/) or leave as is to use the default one. If you change your provider URL after adding your file, please add & validate your file again.",
         "placeholder": "e.g. https://provider.oceanprotocol.com/",
@@ -187,7 +187,7 @@
           {
             "value": "url",
             "title": "API",
-            "label": "File",
+            "label": "Endpoint",
             "placeholder": "e.g. https://file.com/file.json",
             "help": "This URL will be stored encrypted after publishing. **Please make sure that the endpoint is accessible over the internet and is not protected by a firewall or by credentials.**",
             "computeHelp": "For a compute dataset, your file should match the file type required by the algorithm, and should not exceed 1 GB in file size. ",
@@ -212,7 +212,7 @@
             "title": "SaaS",
             "label": "Redirect URL",
             "placeholder": "e.g. https://delta-dao/the-future-is-now",
-            "help": "The url the user will be redirected to after buying access to the SaaS.",
+            "help": "The url the user will be redirected to after buying access to the Software as a Service offering.",
             "prominentHelp": true,
             "type": "saas",
             "fieldFormPrefix": "metadata.saas",
@@ -223,7 +223,7 @@
                 "value": "paymentMode",
                 "title": "PaymentMode",
                 "label": "PaymentMode",
-                "help": "Choose how the payment mode for your Saas.",
+                "help": "Choose the payment mode of your Software as a Service offering.",
                 "type": "select",
                 "selected": "",
                 "options": ["Subscription", "Pay per use"],
@@ -332,7 +332,7 @@
       {
         "name": "timeout",
         "label": "Access Period",
-        "help": "Define how long buyers should be able to download the dataset again after the initial purchase.",
+        "help": "Define how long buyers should be able to access your offering again after the initial purchase.",
         "type": "select",
         "options": [
           "Forever",
