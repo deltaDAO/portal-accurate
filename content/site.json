@@ -30,6 +30,14 @@
       "name": "Ecosystem",
       "subItems": [
         {
+          "name": "Pontus-X Portal",
+          "link": "https://portal.pontus-x.eu/",
+          "description": "The Pontus-X refernece portal.",
+          "image": "deltadao-logo.webp",
+          "category": "ecosystem",
+          "isLive": false
+        },
+        {
           "name": "EuProGigant",
           "link": "https://portal.euprogigant.io/",
           "description": "Gaia-X Lighthouse EuProGigant is the first funded binational industrial project with the practical implementation of the Gaia-X principles.",
@@ -124,14 +132,6 @@
           "image": "energy-shr-logo.webp",
           "category": "energy",
           "isLive": true
-        },
-        {
-          "name": "deltaDAO AI marketplace",
-          "link": "https://market.delta-dao.com/",
-          "description": "With deltaDAO's AI Marketplace, you have the freedom to decide how your AI service is offered. By keeping your AI private, you retain full control and do not disclose your valuable IP.",
-          "image": "deltadao-logo.webp",
-          "category": "AI",
-          "isLive": false
         }
       ]
     },
