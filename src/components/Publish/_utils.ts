@@ -209,7 +209,7 @@ export async function transformPublishFormToDdo(
         }),
         serviceSD: gaiaXInformation?.serviceSD
       },
-      saas: saasDetails
+      ...(files[0].type === 'saas' && { saas: saasDetails })
     },
     ...(type === 'algorithm' &&
       dockerImage !== '' && {

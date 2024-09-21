@@ -170,14 +170,12 @@ export default function Edit({
         )
         updatedFiles = filesEncrypted
 
-        const saasDetails =
-          values.files[0].type === 'saas'
-            ? {
-                redirectUrl: sanitizeUrl(values.files[0].url),
-                paymentMode: values.saas.paymentMode
-              }
-            : {}
-        updatedMetadata.additionalInformation.saas = saasDetails
+        values.files[0].type === 'saas'
+          ? (updatedMetadata.additionalInformation.saas = {
+              redirectUrl: sanitizeUrl(values.files[0].url),
+              paymentMode: values.saas.paymentMode
+            })
+          : delete updatedMetadata.additionalInformation.saas
       }
 
       const updatedService: Service = {

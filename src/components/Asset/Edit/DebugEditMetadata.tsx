@@ -43,6 +43,13 @@ export default function DebugEditMetadata({
       saas: saasDetails
     }
   }
+
+  const showSaas =
+    (values.files[0].type === 'hidden' &&
+      asset.metadata.additionalInformation.saas) ||
+    values.files[0].type === 'saas'
+  if (!showSaas) delete newMetadata.additionalInformation.saas
+
   if (asset.metadata.type === 'algorithm') {
     newMetadata.algorithm.consumerParameters = !values.usesConsumerParameters
       ? undefined
