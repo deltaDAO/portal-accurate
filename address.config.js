@@ -7,7 +7,23 @@ module.exports = {
       '0xb2AF8b92bFaC5299Cb6EDEf16150BFD1d4d26a93',
       '0x3dB4E0b1fC6072271BF51e9a0CC17E3c7C4C99f5'
     ],
-    'datatokens.address': []
+    'datatokens.address': [
+      '0x25244fAad80E52E3d5E1f5f7B7D00132a97169D5', // Condition Monitoring Software - EuProGigant Validation Platform
+      '0xef0E7512F7AF5d4254eA39c7295D411bb3b73321', // CO2-Estimate Algorithm - EuProGigant Validation Platform
+      '0xA1C749aA0b77D129c181Cb7C7bDCB0D677AA5679', // Workpiece Data Part No. 882 - EuProGigant Cloud
+      '0x4800A8709656D23707260831552252C28D71B7A3', // Workpiece Data Part No. 881 - EuProGigant Cloud
+      '0x721c13C16914b1Dcc9f16Ca7F36443E3FF1f669d', // Workpiece Data Part No. 880 - EuProGigant Cloud
+      '0x04E12b7d8B0e1B9e38A7337Dc5327374b31727ac', // The Digital Project Management Office
+      '0x6621028a198614dE39358d017aC7983928a44384', // ProfiTrainer Production Dataset 1725364307631
+      '0x7759f4BCfc24DC16e8D0cDeE49598fCd30840Eee', // ProfiTrainer Production Dataset 1725365355208
+      '0x67a026D3356790B447c3287A5937E4f3851fba93', // ProfiTrainer Production Dataset 1725365954529
+      '0x5A365b74eFdD3bF1DD2C96CC42d964E201706d43', // Holowork
+      '0xb20D3889931517d9AA1D7306c9a521F506f88245', // Tool Recommendation Service
+      '0x6417a347ad30d0745cbb3a851df7c72517c4705c', // Process Optimization Service
+      '0x6406F91b03a7ffbf858e57C3fa205Ae549EFB1a5', // Tool Performance Report Service
+      '0x7622a7Ce0F976D6c5b2DA5755Dce0204973918a5', // CliCE-DiPP x ESCOM Algorithm - PCF-Service
+      '0xA9D37a7f7b2c2E31C74eb9006370CbAEE3818D78' // CliCE-DiPP x ESCOM Data Set
+    ]
   },
   featured: [
     {
@@ -16,6 +32,8 @@ module.exports = {
         'did:op:c524a2ad8aab175315cdbb106289114079637529af988874c1a31e9a179e4540', // Condition Monitoring Software - EuProGigant Validation Platform
         'did:op:291ac52240e7c422aa8e67f9369efa7b30cbdc3f494922f1b646a8091a97fdb6', // CO2-Estimate Algorithm - EuProGigant Validation Platform
         'did:op:ec6abd810b3f3d9f3cf7fbbfd3462e289ee9700f0a1ca492adaf6a8c7d0bdce7', // Workpiece Data Part No. 882 - EuProGigant Cloud
+        'did:op:3bee178505bf07494aeaafe67b5d98b5ebd0986bb56d6673e718f8ac4e090c8a', // Workpiece Data Part No. 881 - EuProGigant Cloud
+        'did:op:daecfe8261713a3854bdb59de6e6eba1e614dae3a40f436f955f2a94559a88ca', // Workpiece Data Part No. 880 - EuProGigant Cloud
         'did:op:7008fbeaff95defda057f26d1802903287a295d25dbd0481bf0a93540f6f8e9b', // CliCE-DiPP x ESCOM Data Set
         'did:op:a03c48ae417db04dbc3e3ad0974dc66cd70d9ac38277218846756cfb468866fc', // CliCE-DiPP x ESCOM Algorithm - PCF-Service
         'did:op:717240e366f832d693ef3d376e5afb839a4e10215df5071ca90503a3a862737f', // Gühring Tool Performance Report Service
