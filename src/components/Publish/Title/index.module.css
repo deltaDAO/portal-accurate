@@ -1,5 +1,5 @@
 .network {
-  color: var(--font-color-heading);
+  color: var(--font-color-text);
   margin-left: calc(var(--spacer) / 3);
 }
 .network svg {

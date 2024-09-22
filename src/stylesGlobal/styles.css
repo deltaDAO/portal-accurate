@@ -160,6 +160,24 @@ table th {
   font-weight: var(--font-weight-bold);
 }
 
+.underlinedTitle h1,
+.underlinedTitle h2,
+.underlinedTitle h3,
+.underlinedTitle h4,
+.underlinedTitle p {
+  display: inline;
+  background-image: linear-gradient(
+    0,
+    transparent 25%,
+    var(--color-primary) 25%,
+    var(--color-primary) 38%,
+    transparent 38%
+  );
+  padding: 0px 3px 6px 3px;
+  text-transform: uppercase;
+  color: var(--brand-black) !important;
+}
+
 @import '_code.css';
 @import '_toast.css';
 @import '_emojipicker.css';

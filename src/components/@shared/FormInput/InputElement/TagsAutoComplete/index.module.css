@@ -1,4 +1,8 @@
 .select [class$='control'] {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-width: var(--input-border-size);
   border-color: var(--input-border-color);
   border-radius: var(--input-border-radius);
   box-shadow: none;
@@ -32,31 +36,32 @@
 }
 
 .select input {
-  color: var(--font-color-heading) !important;
+  color: var(--font-color-text) !important;
 }
 
 .select [class$='menu'] {
-  background-color: var(--background-highlight);
+  background-color: var(--brand-grey);
   border-radius: var(--input-border-radius);
 }
 
 .select [class$='option'] {
   color: var(--input-font-color);
+  background-color: var(--input-background);
   font-size: var(--font-size-base);
   font-family: var(--font-family-base);
   font-weight: var(--font-weight-bold);
 }
 
 .select [class$='option']:active {
-  background-color: var(--background-highlight);
+  background-color: var(--input-background);
 }
 
 .select [class$='multiValue'],
 .select [class$='multiValue'] > *,
 .select [class$='multiValue']:hover > * {
   border-radius: var(--input-border-radius);
-  background-color: var(--input-background-highlight);
-  color: var(--input-font-color);
+  background-color: var(--color-primary);
+  color: var(--brand-white);
   font-size: var(--font-size-base);
   font-family: var(--font-family-base);
   font-weight: var(--font-weight-bold);
@@ -81,8 +86,8 @@
 .select [class$='menu'] {
   background-color: var(--input-background);
   margin-top: -2px;
-  border: var(--input-border-size) solid var(--input-border-color);
-  border-top-color: var(--input-border-color);
+  border: var(--input-border-size) solid var(--input-selected-border-color);
+  border-top-color: var(--input-selected-border-color);
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   box-shadow: none;

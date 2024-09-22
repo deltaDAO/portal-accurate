@@ -17,7 +17,6 @@ const columns: TableOceanColumn<AssetExtended>[] = [
       const { metadata } = row
       return <AssetTitle title={metadata.name} asset={row} />
     },
-    maxWidth: '45rem',
     grow: 1
   },
   {
@@ -27,11 +26,12 @@ const columns: TableOceanColumn<AssetExtended>[] = [
         <>{row.datatokens[0].symbol}</>
       </Tooltip>
     ),
-    maxWidth: '10rem'
+    maxWidth: '12rem'
   },
   {
     name: 'Price',
     selector: (row) => <Price price={row.stats.price} size="small" />,
+    maxWidth: '12rem',
     right: true
   }
 ]

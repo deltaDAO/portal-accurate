@@ -20,6 +20,7 @@
   text-align: left;
   margin-bottom: 0;
   font-weight: bold;
+  font-size: var(--font-size-large);
 }
 
 .main {
@@ -32,6 +33,7 @@
 .main img {
   margin-left: 0;
   margin-top: auto;
+  padding: calc(var(--spacer) / var(--line-height)) 0;
 }
 
 .copyright a {

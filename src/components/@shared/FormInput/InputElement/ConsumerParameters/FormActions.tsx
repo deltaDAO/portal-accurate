@@ -59,7 +59,7 @@ export default function FormActions({
   return (
     <div className={styles.actions}>
       <Button
-        style="ghost"
+        style="text"
         size="small"
         disabled={field.value.length === 1}
         onClick={(e) => {

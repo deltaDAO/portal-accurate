@@ -1,5 +1,13 @@
+.wrapper {
+  margin-top: calc(var(--spacer) * 3);
+  margin-bottom: var(--spacer);
+}
+
+.wrapper > div:first-of-type {
+  margin-bottom: var(--spacer);
+}
+
 .container {
-  margin: var(--spacer) 0;
   position: relative;
   padding: var(--spacer) 0;
 }
@@ -13,7 +21,7 @@
   transform: translateX(-50%);
   height: 100%;
   width: 100vw;
-  background: var(--background-highlight);
+  background: var(--brand-grey);
   z-index: -1;
 }
 
@@ -23,19 +31,20 @@
   align-items: center;
   justify-content: space-between;
   gap: var(--spacer);
-  padding: var(--spacer);
+  padding: var(--spacer) 0;
 }
 
 .stat {
   padding: var(--spacer);
   text-align: center;
   border-radius: var(--border-radius);
-  background: var(--brand-grey-light);
+  background: var(--brand-white);
+  border: var(--border-size-lg) solid var(--border-color);
   width: 100%;
 }
 
 .stat h4 {
-  color: var(--color-secondary);
+  color: var(--color-primary);
   font-size: var(--font-size-h1);
   margin-bottom: calc(var(--spacer) / 3);
 }

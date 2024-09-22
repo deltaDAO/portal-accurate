@@ -39,8 +39,9 @@ export const customStyles: TableStyles = {
   headCells: {
     style: {
       textTransform: 'uppercase',
-      color: 'var(--color-primary)',
-      fontSize: 'var(--font-size-small)'
+      color: 'var(--color-secondary)',
+      fontSize: 'var(--font-size-small)',
+      fontWeight: 'var(--font-weight-bold)'
     }
   },
   cells: {

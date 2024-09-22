@@ -5,31 +5,32 @@
   },
   "paragraphs": [
     {
-      "title": "The Manufacturing Ecosystem",
-      "body": "In the rapidly evolving digital landscape, challenges like the COVID-19 pandemic have forced manufacturers to rethink not only their supply chains but also the adaptability of their production facilities. Achieving resilient manufacturing is crucial to maintain high-quality production at efficient rates while reducing non-value-adding activities.",
+      "title": "Our Vision: Transforming Manufacturing into a Service (MAAS)",
+      "body": "ACCURATE envisions resilient Manufacturing as a Service (MAAS) value chains designed to withstand both prolonged and immediate disruptions. Our goal is to redefine the industry, ensuring that MAAS not only achieves technical viability but also establishes economic sustainability, profitability, and environmental friendliness.",
       "cta": "Learn More",
-      "ctaTo": "https://flex4res.eu"
+      "ctaTo": "https://accurateproject.eu",
+      "image": "/images/accurate-home-graphic.webp"
     },
     {
-      "title": "Flex4Res Concept",
-      "body": "The European research project Flex4Res, which stands for Data spaces for FLEXible production lines and supply chains FOR RESilient manufacturing, concentrates on making supply chains more resilient. To achieve this, Flex4Res develops an open platform for secure and sovereign data exchange along the supply chain that supports the reconfiguration of production networks. It also develops two toolboxes: one for resilience assessment and one for reconfiguration planning. These toolboxes allow different players in the supply chain to effectively and rapidly adjust to various disruptions, both in their supply chains and production processes.",
+      "title": "Our Mission",
+      "body": "We're dedicated to delivering a federated MAAS framework, data space, and ecosystem. Fueled by intricate multi-level digital twin models of MAAS value chains, our mission is to forge a collaborative Decision-Support System. This empowers robust planning, resilient operation, and swift recovery for value networks and industrial systems.",
       "cta": "Learn More",
-      "ctaTo": "https://flex4res.eu",
-      "image": "/images/flex4res-concept.webp"
+      "ctaTo": "https://accurateproject.eu",
+      "image": "/images/accurate-our-mission.webp"
     }
   ],
   "stats": [
     {
-      "label": "Million Euro funding amount",
-      "value": 8
+      "label": "EU Countries",
+      "value": 6
     },
     {
-      "label": "project partner",
-      "value": 17
+      "label": "EU Key Players",
+      "value": 11
     },
     {
-      "label": "use cases",
-      "value": 4
+      "label": "Pilots",
+      "value": 3
     }
   ]
 }
