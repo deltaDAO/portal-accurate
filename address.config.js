@@ -13,9 +13,19 @@ module.exports = {
     {
       title: 'Featured Service Offerings',
       assets: [
-        'did:op:bd74d6a281ba414de2b4d8ee4087277575f95676bd74e20ee9e2960c9c38d7c5', // ToolCondition-Algorithm - EuProGigant Validation Platform
-        'did:op:a3da777fd3711da36d5e1e5904a8c074b6e8df51549db2b6c8a5bc7ec3ab60cf', // CO2-Estimate Algorithm - EuProGigant Validation Platform
-        'did:op:df64a2b05a8de027a94c0f4a99af63650667d2e5e723bebc9229a368ac452447' // Data Part No. 598
+        'did:op:c524a2ad8aab175315cdbb106289114079637529af988874c1a31e9a179e4540', // Condition Monitoring Software - EuProGigant Validation Platform
+        'did:op:291ac52240e7c422aa8e67f9369efa7b30cbdc3f494922f1b646a8091a97fdb6', // CO2-Estimate Algorithm - EuProGigant Validation Platform
+        'did:op:ec6abd810b3f3d9f3cf7fbbfd3462e289ee9700f0a1ca492adaf6a8c7d0bdce7', // Workpiece Data Part No. 882 - EuProGigant Cloud
+        'did:op:7008fbeaff95defda057f26d1802903287a295d25dbd0481bf0a93540f6f8e9b', // CliCE-DiPP x ESCOM Data Set
+        'did:op:a03c48ae417db04dbc3e3ad0974dc66cd70d9ac38277218846756cfb468866fc', // CliCE-DiPP x ESCOM Algorithm - PCF-Service
+        'did:op:717240e366f832d693ef3d376e5afb839a4e10215df5071ca90503a3a862737f', // Gühring Tool Performance Report Service
+        'did:op:1e129912c2a25888a6a480c7dbbd8f99834f94361d078064a83990fa60d21436', // Gühring Process Optimization Service
+        'did:op:e9907813dc738613b81905ee800d8bb97ae8ebd49b0876ed8c4925ed66e88890', // Gühring Tool Recommendation Service
+        'did:op:91a3e8fdc3e1e6fc720c8c0ba5753566ad3a345e76b4fcb622598f9bd7582e7a', // Holoworks
+        'did:op:4ac6c543dcc8f815ea33f3e0628bb8a9bc710f95d37aaa6ee96543d30db1c0d9', // IGH ProfiTrainer Production Dataset 1725365954529
+        'did:op:5e5f43ff384f844566ec749df53b9b4668dfc03fe64b58975481a4ffda8ccfd3', // IGH ProfiTrainer Production Dataset 1725365355208
+        'did:op:fd0b1dc94e6d52363edc78ac60d32840e9abdef28e1e5048c43dfa87ebfea209', // IGH ProfiTrainer Production Dataset 1725364307631
+        'did:op:8cb0f9c2d652366284bc0feda914f33894be6cadfb8e593071012ab10c85cbd7' // Digital PMO
       ]
     }
   ],
