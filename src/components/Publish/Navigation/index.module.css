@@ -4,8 +4,8 @@
   padding: calc(var(--spacer) / 2) 0;
   scrollbar-width: none;
   border-bottom: 1px solid var(--border-color);
-  background-color: var(--background-highlight);
-  color: var(--color-primary);
+  background-color: var(--brand-black);
+  color: var(--brand-white);
 }
 
 @media (min-width: 40rem) {
@@ -56,7 +56,7 @@
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
-  border: 1px solid var(--color-primary);
+  border: var(--border-size-md) solid var(--brand-white);
   margin-right: calc(var(--spacer) / 4);
 }
 
@@ -68,7 +68,7 @@
   left: 100%;
   top: 1rem;
   width: 50%;
-  background: var(--color-primary);
+  background: var(--brand-white);
   height: 1px;
 }
 
@@ -79,7 +79,7 @@
 .current:before {
   color: var(--background-content);
   background: var(--color-primary);
-  border-color: transparent;
+  border-color: var(--color-primary) !important;
 }
 
 .navigation .success:before {

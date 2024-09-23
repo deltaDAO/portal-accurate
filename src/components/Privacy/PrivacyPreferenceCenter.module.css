@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background: var(--background-body-transparent);
+  background: rgba(0, 0, 0, 0.9);
   backdrop-filter: blur(4px);
   padding: calc(var(--spacer) / 2);
   min-height: 100vh;
@@ -11,6 +11,7 @@
 
 .banner p {
   margin: 0;
+  color: var(--brand-white);
 }
 
 .buttons {
@@ -28,6 +29,17 @@
 
 .closeButton {
   margin-top: var(--spacer);
+}
+
+.closeButton,
+.closeButton:hover,
+.closeButton:active,
+.closeButton:focus {
+  border: none;
+  border-radius: var(--border-radius);
+  text-transform: capitalize;
+  color: white;
+  background: var(--color-primary);
 }
 
 .header {

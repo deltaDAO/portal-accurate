@@ -1,15 +1,7 @@
 @font-face {
-  font-family: 'Asap';
-  font-weight: 400;
+  font-family: 'Roboto Flex';
+  font-weight: 400 700;
   font-display: swap;
   font-style: normal;
-  src: url('./Asap-Regular.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Asap';
-  font-weight: 700;
-  font-display: swap;
-  font-style: normal;
-  src: url('./Asap-Bold.ttf') format('truetype');
+  src: url('./RobotoFlex-VariableFont.ttf') format('truetype');
 }

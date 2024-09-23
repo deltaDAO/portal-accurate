@@ -5,6 +5,8 @@ import { getOceanConfig } from './ocean'
 import { OrdersData_orders as OrdersData } from '../@types/subgraph/OrdersData'
 import { OpcFeesQuery as OpcFeesData } from '../@types/subgraph/OpcFeesQuery'
 import appConfig from '../../app.config'
+import { chains } from '../../chains.config'
+import { ethers } from 'ethers'
 
 const UserTokenOrders = gql`
   query OrdersData($user: String!) {
@@ -58,6 +60,8 @@ const OpcsApprovedTokensQuery = gql`
 export const tokenAddressesEUROe = {
   100: '0xe974c4894996e012399dedbda0be7314a73bbff1',
   137: '0x820802Fa8a99901F52e39acD21177b0BE6EE2974',
+  32456: '0x8A4826071983655805bF4f29828577Cd6b1aC0cB',
+  32457: '0xdd0a0278f6BAF167999ccd8Aa6C11A9e2fA37F0a',
   80001: '0xA089a21902914C3f3325dBE2334E9B466071E5f1'
 }
 
@@ -179,12 +183,23 @@ export async function getOpcsApprovedTokens(
     if (!Object.keys(tokenAddressesEUROe).includes(chainId.toString()))
       return approvedTokens
 
-    return approvedTokens.includes(
-      (token) => token.address === tokenAddressesEUROe[chainId]
+    const oceanTokenAddress = chains.find(
+      (chain) => chain.chainId === chainId
+    )?.oceanTokenAddress
+    const approvedTokensWithoutOcean = approvedTokens.filter(
+      (token) =>
+        ethers.utils.getAddress(token.address) !==
+        ethers.utils.getAddress(oceanTokenAddress)
     )
-      ? approvedTokens
+
+    return approvedTokensWithoutOcean.includes(
+      (token) =>
+        ethers.utils.getAddress(token.address) ===
+        ethers.utils.getAddress(tokenAddressesEUROe[chainId])
+    )
+      ? approvedTokensWithoutOcean
       : [
-          ...approvedTokens,
+          ...approvedTokensWithoutOcean,
           {
             address: tokenAddressesEUROe[chainId],
             decimals: 6,

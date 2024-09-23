@@ -1,6 +1,6 @@
 .container {
   margin-bottom: var(--spacer);
-  margin-top: calc(var(--spacer) * 2);
+  margin-top: calc(var(--spacer) * 3);
 }
 
 .centered {
@@ -13,13 +13,11 @@
     justify-content: center;
     align-items: center;
     gap: var(--spacer);
-    text-align: right;
     margin-top: var(--spacer);
   }
 
   .paragraph.mirror {
     flex-direction: row-reverse;
-    text-align: left;
   }
 }
 
@@ -36,6 +34,5 @@
 .content button,
 .content a[class*='button'] {
   display: block;
-  margin: var(--spacer) auto;
-  margin-right: auto;
+  margin: var(--spacer) 0;
 }

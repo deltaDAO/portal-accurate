@@ -28,3 +28,8 @@
   width: var(--font-size-base);
   height: var(--font-size-base);
 }
+
+.button:hover .searchIcon,
+.button:focus .searchIcon {
+  fill: var(--menu-font-color-hover);
+}

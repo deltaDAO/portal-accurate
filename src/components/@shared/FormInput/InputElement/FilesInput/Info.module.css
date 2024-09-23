@@ -2,7 +2,7 @@
   border-radius: var(--border-radius);
   padding: calc(var(--spacer) / 2);
   border: 1px solid var(--border-color);
-  background-color: var(--background-highlight);
+  background-color: var(--input-background);
   position: relative;
 }
 

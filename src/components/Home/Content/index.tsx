@@ -52,7 +52,7 @@ export default function HomeContent(): ReactElement {
             </div>
 
             <div className={styles.content}>
-              <h2>{paragraph.title}</h2>
+              <h3>{paragraph.title}</h3>
               <Markdown text={paragraph.body} />
               <Button href={paragraph.ctaTo} style="primary">
                 {paragraph.cta}

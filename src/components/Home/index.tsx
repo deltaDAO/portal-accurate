@@ -1,6 +1,6 @@
 import { ReactElement, useEffect, useState } from 'react'
 import Button from '@shared/atoms/Button'
-import LogoDeltaDAO from '@images/deltaDAO_Logo_small_RGB_positiv.svg'
+import LogoDeltaDAOWhite from '@images/deltaDAO_Logo_small_RGB_white.svg'
 import { generateBaseQuery, getFilterTerm } from '@utils/aquarius'
 import { useUserPreferences } from '@context/UserPreferences'
 import { SortTermOptions } from '../../@types/aquarius/SearchQuery'
@@ -100,15 +100,17 @@ export default function HomePage(): ReactElement {
 
       <ProjectPartners />
 
-      <a
-        href="https://delta-dao.com"
-        target="_blank"
-        className={styles.poweredby}
-        rel="noreferrer"
-      >
-        <p>Powered by</p>
-        <LogoDeltaDAO />
-      </a>
+      <div className={styles.poweredBySection}>
+        <a
+          href="https://delta-dao.com"
+          target="_blank"
+          className={styles.poweredBy}
+          rel="noreferrer"
+        >
+          <p>Powered by</p>
+          <LogoDeltaDAOWhite />
+        </a>
+      </div>
     </>
   )
 }

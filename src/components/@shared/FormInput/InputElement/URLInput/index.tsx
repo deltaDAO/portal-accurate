@@ -64,7 +64,7 @@ export default function URLInput({
 
         {!hideButton && (
           <Button
-            style="primary"
+            style="ghost"
             size="small"
             onClick={(e: React.SyntheticEvent) => {
               e.preventDefault()

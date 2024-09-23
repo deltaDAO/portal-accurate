@@ -6,7 +6,7 @@
 
 .title a {
   font-size: var(--font-size-base);
-  color: var(--font-color-heading);
+  color: var(--font-color-text);
 }
 
 .title a:hover,

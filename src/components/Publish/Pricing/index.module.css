@@ -1,5 +1,20 @@
-.pricing input {
+.pricing ul > input {
   text-align: center;
+  background: var(--brand-white) !important;
+  border-color: var(--brand-black) !important;
+}
+
+.pricing ul > input:after {
+  background: var(--brand-white) !important;
+}
+
+.pricing ul > li[aria-selected='true'] input {
+  background: var(--brand-white) !important;
+  border-color: var(--brand-white) !important;
+}
+
+.pricing ul > li[aria-selected='true'] input:after {
+  background: var(--color-primary) !important;
 }
 
 .pricing ul > li[class*='Tabs_tab'] {
