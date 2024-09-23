@@ -1,9 +1,9 @@
 {
-  "siteTitle": "Flex4Res Manufacturing",
-  "siteTagline": "Data spaces for flexible production lines & supply chains",
-  "siteUrl": "https://flex4res.pontus-x.eu",
+  "siteTitle": "Accurate Marketplace",
+  "siteTagline": "Revolutionizing Manufacturing as a Service",
+  "siteUrl": "https://accurate.pontus-x.eu",
   "siteImage": "/share.png",
-  "copyright": "All Rights Reserved. Powered by [Ocean Protocol](https://oceanprotocol.com). Built by [deltaDAO](https://delta-dao.com).",
+  "copyright": "All Rights Reserved. Powered by [Gaia-X](https://gaia-x.eu/) and [Ocean Enterprise](https://www.oceanenterprise.io/). Built by [deltaDAO](https://delta-dao.com).",
   "menu": [
     {
       "name": "Catalogue",
@@ -18,6 +18,11 @@
       "link": "/verify"
     },
     {
+      "name": "Faucet",
+      "link": "/faucet"
+    },
+
+    {
       "name": "Log",
       "link": "https://explorer.pontus-x.eu/"
     },
@@ -25,74 +30,125 @@
       "name": "Ecosystem",
       "subItems": [
         {
+          "name": "Pontus-X Portal",
+          "link": "https://portal.pontus-x.eu/",
+          "description": "The Pontus-X reference portal.",
+          "image": "deltadao-logo.webp",
+          "category": "ecosystem",
+          "isLive": false
+        },
+        {
           "name": "EuProGigant",
           "link": "https://portal.euprogigant.io/",
-          "description": "EuProGigant is the first funded binational industrial project with the practical implementation of the Gaia-X principles.",
+          "description": "Gaia-X Lighthouse EuProGigant is the first funded binational industrial project with the practical implementation of the Gaia-X principles.",
           "image": "euprogigant-logo.webp",
-          "category": "manufacturing"
+          "category": "manufacturing",
+          "isLive": true
         },
         {
-          "name": "GX4M moveID",
+          "name": "GX4FM moveID",
           "link": "https://portal.moveid.eu/",
-          "description": "moveID aims to develop a decentralized digital mobility identity infrastructure for Europe.",
-          "image": "moveid-logo.webp",
-          "category": "mobility"
+          "description": "Gaia-X Lighthouse Gaia-X 4 Future Mobility aims to develop a decentralized digital mobility identity infrastructure for Europe.",
+          "image": "gx4fm_moveid.webp",
+          "category": "mobility",
+          "isLive": true
         },
         {
-          "name": "Cooperants",
-          "link": "https://cooperants.pontus-x.eu/",
-          "description": "The world's only collaborative alliance in the Aeronautics and space sector that solves pressing digital collaboration problems by creating a common data space.",
+          "name": "COOPERANTS",
+          "link": "https://federator.cooperants.info/marketplace",
+          "description": "Gaia-X Lighthouse COOPERANTS is the collaborative alliance in the Aeronautics and space sector that solves pressing digital collaboration problems by creating a common data space.",
           "image": "cooperants-logo.webp",
-          "category": "space"
+          "category": "manufacturing",
+          "isLive": true
         },
         {
           "name": "Airbus",
           "link": "https://airbus.pontus-x.eu/",
           "description": "For those who make this world a safer place. We pioneer defense and space for their mission success.",
           "image": "airbus-logo.webp",
-          "category": "space"
+          "category": "manufacturing",
+          "isLive": true
         },
         {
           "name": "Service-Meister",
           "link": "https://servicemeister.pontus-x.eu/",
           "description": "An AI-based Service Ecosystem for Technical Service in the Age of Industry 4.0.",
           "image": "service-meister-logo.webp",
-          "category": "manufacturing"
-        },
-        {
-          "name": "Future Mobility Marketplace",
-          "link": "https://marketplace.future-mobility-alliance.org/",
-          "description": "Find or publish datasets and AI algorithms for solving challenges in mobility.",
-          "image": "fmdm-logo.webp",
-          "category": "mobility"
+          "category": "AI",
+          "isLive": true
         },
         {
           "name": "Berlin State Library",
           "link": "https://sbb.pontus-x.eu/",
           "description": "Explore the Open Science Ecosystem, a collaboration of libraries, universities, and science pioneers under Gaia-X principles for limitless shared knowledge.",
           "image": "sbb-logo.webp",
-          "category": "science"
+          "category": "language models",
+          "isLive": true
         },
         {
-          "name": "EnergySHR",
-          "link": "https://www.energyshr.nl/",
-          "description": "A platform for sharing (SHR) datasets and AI algorithms that contribute to solving challenges of the energy transition.",
-          "image": "energy-shr-logo.webp",
-          "category": "science"
+          "name": "Flex4Res",
+          "link": "https://flex4res.pontus-x.eu/",
+          "description": "Flex4Res stands for Data spaces for FLEXible production lines and supply chains FOR RESilient manufacturing. Flex4Res develops an open platform for secure and sovereign data exchange",
+          "image": "flex4res-logo.webp",
+          "category": "manufacturing",
+          "isLive": true
         },
         {
-          "name": "Clinical Insights Exchange",
-          "link": "https://cix.triall.io/",
-          "description": "A federated data platform to change clinical data assets and analytics services in a trusted, privacy-friendly environment.",
-          "image": "clinical-insights-exchange-logo.webp",
-          "category": "health"
+          "name": "Future Mobility Marketplace",
+          "link": "https://marketplace.future-mobility-alliance.org/",
+          "description": "Find or publish datasets and AI algorithms for solving challenges in mobility.",
+          "image": "fmdm-logo.webp",
+          "category": "mobility",
+          "isLive": true
         },
         {
           "name": "UdL Research Data Space",
           "link": "https://dataspace.angliru.udl.cat/",
           "description": "An open research platform following the FAIR guiding principles of findability, accessibility, interoperability and reusability, while guaranteeing data sovereignty.",
           "image": "udl-logo.webp",
-          "category": "science"
+          "category": "agriculture",
+          "isLive": true
+        },
+        {
+          "name": "Agrifood TEF",
+          "link": "http://dataspace.agrifoodtef.eu/",
+          "description": "The European Testing and Experimentation Facilities for Agrifood Innovation.",
+          "image": "agrifoodTEF.webp",
+          "category": "agriculture",
+          "isLive": true
+        },
+        {
+          "name": "Polish Agriculture Data Space",
+          "link": "https://dataspaces.psnc.pl/",
+          "description": "An open data space platform for sharing and marketing agri-related datasets guaranteeing data sovereignty.",
+          "image": "PSNC.webp",
+          "category": "agriculture",
+          "isLive": true
+        },
+        {
+          "name": "EnergySHR",
+          "link": "https://www.energyshr.nl/",
+          "description": "A platform for sharing (SHR) datasets and AI algorithms that contribute to solving challenges of the energy transition.",
+          "image": "energy-shr-logo.webp",
+          "category": "energy",
+          "isLive": true
+        }
+      ]
+    },
+    {
+      "name": "Resources",
+      "subItems": [
+        {
+          "name": "Documentation",
+          "link": "https://docs.pontus-x.eu/"
+        },
+        {
+          "name": "Landing Page",
+          "link": "https://www.pontus-x.eu/"
+        },
+        {
+          "name": "nautilus",
+          "link": "https://nautilus.delta-dao.com/"
         }
       ]
     }
@@ -103,7 +159,7 @@
     "ctd": "Please note that Compute-to-Data is still in alpha phase."
   },
   "footer": {
-    "notice": "Co-funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Health and Digital Executive Agency. Neither the European Union nor the granting authority can be held responsible for them.\n\nThis project has received funding from the European Union‘s Horizon Europe research and innovation programme under grant agreement No 101091903",
+    "notice": "The ACCURATE project is funded by the European Union, under Grant Agreement number 101138269. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Health and Digital Executive Agency. Neither the European Union nor the granting authority can be held responsible for them.\n\nStart: 01/12/2023\nFinish: 30/11/2026",
     "copyright": "Built by [deltaDAO](https://delta-dao.com)",
     "privacyTitle": "Privacy",
     "content": [

@@ -4,8 +4,8 @@
   --spacing: clamp(0.35rem, 2vw, 0.5rem);
   --background-gradient: linear-gradient(
     to right,
-    var(--color-secondary) 50%,
-    var(--color-primary) 50%
+    var(--color-primary) 50%,
+    var(--color-secondary) 50%
   );
 }
 
@@ -31,12 +31,12 @@
 }
 
 .step .title {
-  color: var(--color-primary);
+  color: var(--color-secondary);
   transition: all 0.3s ease-out;
 }
 
 .active .title {
-  color: var(--color-secondary);
+  color: var(--color-primary);
   transition-delay: 0.5s;
 }
 

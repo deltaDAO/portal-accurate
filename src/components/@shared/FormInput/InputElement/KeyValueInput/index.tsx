@@ -128,7 +128,7 @@ export default function InputKeyValue({
         />
 
         <Button
-          style="primary"
+          style="ghost"
           size="small"
           onClick={(e: React.SyntheticEvent) => {
             e.preventDefault()
@@ -163,7 +163,7 @@ export default function InputKeyValue({
               />
 
               <Button
-                style="primary"
+                style="ghost"
                 size="small"
                 onClick={(e: React.SyntheticEvent) => {
                   e.preventDefault()

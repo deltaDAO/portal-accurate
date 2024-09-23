@@ -1,6 +1,6 @@
 .container {
   position: relative;
-  height: 55rem;
+  height: 60rem;
   overflow: hidden;
 }
 
@@ -12,6 +12,6 @@
 
 @media screen and (min-width: 60rem) {
   .container {
-    height: 40rem;
+    height: 42rem;
   }
 }

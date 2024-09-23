@@ -27,7 +27,7 @@
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 50%;
-  border: 2px solid var(--border-color);
+  border: 1px solid var(--border-color);
   margin-right: calc(var(--spacer) / 4);
   font-weight: var(--font-weight-bold);
   font-size: var(--font-size-small);

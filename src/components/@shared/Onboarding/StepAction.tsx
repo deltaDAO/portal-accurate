@@ -33,7 +33,7 @@ export default function StepAction({
           className={styles.success}
         />
       ) : (
-        <Button style="primary" onClick={buttonAction}>
+        <Button style="ghost" onClick={buttonAction}>
           {buttonLabel}
         </Button>
       )}

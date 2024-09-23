@@ -4,7 +4,7 @@
   font-weight: var(--font-weight-base);
   border: none;
   margin-right: -0.5rem;
-  background-color: var(--background-highlight);
+  background-color: var(--input-background);
   width: auto;
   padding: 0 1.75rem 0 0.25rem;
   height: 41px;

@@ -4,9 +4,12 @@
 }
 
 .inputGroup button {
+  border: none;
+  color: var(--button-ghost-font-color);
+  background: var(--button-ghost-background);
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  margin-top: -1px;
+  margin-top: calc(var(--spacer) / 2);
   width: 100%;
 }
 
@@ -14,7 +17,9 @@
 .inputGroup button:focus,
 .inputGroup input:focus + button:hover,
 .inputGroup input:focus + button:focus {
-  background: var(--button-primary-background);
+  border: none;
+  color: var(--button-ghost-font-color);
+  background: var(--button-ghost-hover-background);
   transform: none;
   box-shadow: none;
 }
@@ -22,6 +27,7 @@
 @media screen and (min-width: 30rem) {
   .inputGroup {
     display: flex;
+    gap: var(--spacer);
   }
 
   .inputGroup > div {
@@ -35,6 +41,9 @@
   }
 
   .inputGroup button {
+    border: none;
+    color: var(--button-ghost-font-color);
+    background: var(--button-ghost-background);
     border-top-right-radius: var(--border-radius);
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
@@ -47,5 +56,8 @@
 
 .inputGroup > button:hover,
 .inputGroup > button:focus {
+  border: none;
+  color: var(--button-ghost-font-color);
+  background: var(--button-ghost-hover-background);
   transform: none;
 }

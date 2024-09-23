@@ -9,7 +9,7 @@
   width: 100%;
   position: relative;
   padding: 1rem;
-  background-color: var(--brand-white);
+  background-color: var(--brand-black);
 }
 
 .carouselContentWrapper {

@@ -15,20 +15,14 @@ export default function Footer(): ReactElement {
       <Container className={styles.container}>
         <div>
           <p className={styles.siteTitle}>{siteTitle}</p>
-          <a
-            href="https://delta-dao.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div className={styles.main}>
-              <img
-                className={styles.logo}
-                alt={`Logo`}
-                src={`/images/EU-co-funded.png`}
-              />
-              <Markdown className={styles.notice} text={notice} />
-            </div>
-          </a>
+          <div className={styles.main}>
+            <img
+              className={styles.logo}
+              alt={`Logo`}
+              src={`/images/eu-funded.webp`}
+            />
+            <Markdown className={styles.notice} text={notice} />
+          </div>
         </div>
         <Links />
       </Container>
