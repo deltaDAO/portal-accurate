@@ -48,7 +48,7 @@ export function getInitialValues(
         ?.termsAndConditions || [{ url: '' }]
     },
     license: metadata?.license,
-    saas: metadata.additionalInformation.saas || {}
+    saas: metadata?.additionalInformation?.saas || {}
   }
 }
 

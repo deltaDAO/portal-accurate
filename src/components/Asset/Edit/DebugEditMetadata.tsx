@@ -21,7 +21,7 @@ export default function DebugEditMetadata({
     values.links[0].valid && [sanitizeUrl(values.links[0].url)]
   const saasDetails =
     values.files[0].type === 'hidden'
-      ? asset.metadata.additionalInformation.saas
+      ? asset?.metadata?.additionalInformation?.saas
       : values.files[0].type === 'saas'
       ? {
           redirectUrl: sanitizeUrl(values.files[0].url),
@@ -46,7 +46,7 @@ export default function DebugEditMetadata({
 
   const showSaas =
     (values.files[0].type === 'hidden' &&
-      asset.metadata.additionalInformation.saas) ||
+      asset?.metadata?.additionalInformation?.saas) ||
     values.files[0].type === 'saas'
   if (!showSaas) delete newMetadata.additionalInformation.saas
 
