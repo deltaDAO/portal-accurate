@@ -356,13 +356,15 @@ export async function getAlgorithmDatasetsForCompute(
   const baseQueryParams = {
     chainIds: [datasetChainId],
     nestedQuery: {
-      must: {
-        match_phrase: {
-          'services.compute.publisherTrustedAlgorithms.did': {
-            query: algorithmId
+      must: [
+        {
+          match_phrase: {
+            'services.compute.publisherTrustedAlgorithms.did': {
+              query: algorithmId
+            }
           }
         }
-      }
+      ]
     },
     sortOptions: {
       sortBy: SortTermOptions.Created,
