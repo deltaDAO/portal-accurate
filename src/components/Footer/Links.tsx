@@ -35,10 +35,16 @@ export default function Links(): ReactElement {
       <div className={styles.section}>
         <p className={styles.title}>{privacyTitle}</p>
         <div className={styles.links}>
-          <Button href="https://pontus-x.eu/imprint" className={styles.link}>
+          <Button
+            href="https://portal.pontus-x.eu/imprint"
+            className={styles.link}
+          >
             Imprint
           </Button>
-          <Button href="https://pontus-x.eu/privacy/en" className={styles.link}>
+          <Button
+            href="https://portal.pontus-x.eu/privacy/en"
+            className={styles.link}
+          >
             Privacy
           </Button>
           {appConfig.privacyPreferenceCenter === 'true' && (
