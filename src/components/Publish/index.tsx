@@ -26,6 +26,7 @@ import { setNFTMetadataAndTokenURI } from '@utils/nft'
 import { customProviderUrl } from '../../../app.config'
 import { useAccount, useNetwork, useSigner } from 'wagmi'
 import { useAutomation } from '../../@context/Automation/AutomationProvider'
+import Container from '@components/@shared/atoms/Container'
 
 export default function PublishPage({
   content

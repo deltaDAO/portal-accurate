@@ -1,8 +1,5 @@
 import { ReactElement } from 'react'
 import styles from './StepHeader.module.css'
-import classNames from 'classnames/bind'
-
-const cx = classNames.bind(styles)
 
 export default function StepHeader({
   title,
@@ -13,9 +10,7 @@ export default function StepHeader({
 }): ReactElement {
   return (
     <div className={styles.header}>
-      <div className={cx({ underlinedTitle: true })}>
-        <h3 className={styles.title}>{title}</h3>
-      </div>
+      <h3 className={styles.title}>{title}</h3>
       <h5 className={styles.subtitle}>{subtitle}</h5>
     </div>
   )

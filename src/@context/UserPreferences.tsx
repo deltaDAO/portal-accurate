@@ -32,10 +32,10 @@ interface UserPreferencesValue {
   setAutomationWalletJSON: (encryptedWallet: string) => void
   automationWalletMode: AUTOMATION_MODES
   setAutomationWalletMode: (mode: AUTOMATION_MODES) => void
-  onboardingStep: number
-  setOnboardingStep: (step: number) => void
   showOnboardingModule: boolean
   setShowOnboardingModule: (value: boolean) => void
+  onboardingStep: number
+  setOnboardingStep: (step: number) => void
 }
 
 const UserPreferencesContext = createContext(null)
@@ -95,14 +95,14 @@ function UserPreferencesProvider({
       localStorage?.automationWalletMode || AUTOMATION_MODES.SIMPLE
     )
 
-  const [onboardingStep, setOnboardingStep] = useState<number>(
-    localStorage?.onboardingStep || 0
-  )
-
   const [showOnboardingModule, setShowOnboardingModule] = useState<boolean>(
     localStorage?.showOnboardingModule === undefined
-      ? true
+      ? false
       : localStorage?.showOnboardingModule
+  )
+
+  const [onboardingStep, setOnboardingStep] = useState<number>(
+    localStorage?.onboardingStep || 0
   )
 
   // Write values to localStorage on change
@@ -117,8 +117,8 @@ function UserPreferencesProvider({
       allowExternalContent,
       automationWalletJSON: automationWallet,
       automationWalletMode,
-      onboardingStep,
-      showOnboardingModule
+      showOnboardingModule,
+      onboardingStep
     })
   }, [
     chainIds,
@@ -130,8 +130,8 @@ function UserPreferencesProvider({
     allowExternalContent,
     automationWallet,
     automationWalletMode,
-    onboardingStep,
-    showOnboardingModule
+    showOnboardingModule,
+    onboardingStep
   ])
 
   // Set ocean.js log levels, default: Error
@@ -201,10 +201,10 @@ function UserPreferencesProvider({
           setAutomationWalletJSON: setAutomationWallet,
           automationWalletMode,
           setAutomationWalletMode,
-          onboardingStep,
-          setOnboardingStep,
           showOnboardingModule,
-          setShowOnboardingModule
+          setShowOnboardingModule,
+          onboardingStep,
+          setOnboardingStep
         } as UserPreferencesValue
       }
     >
