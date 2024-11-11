@@ -1,41 +1,56 @@
-import { ReactElement, useCallback, useEffect, useState } from 'react'
-import { LoggerInstance } from '@oceanprotocol/lib'
-import styles from './index.module.css'
-import InputGroup from '@components/@shared/FormInput/InputGroup'
-import InputElement from '@components/@shared/FormInput/InputElement'
+import Alert from '@components/@shared/atoms/Alert'
 import Button from '@components/@shared/atoms/Button'
 import Loader from '@components/@shared/atoms/Loader'
-import Alert from '@components/@shared/atoms/Alert'
-import content from '../../../content/pages/faucet.json'
-import { ethers } from 'ethers'
-import { getMessage, requestTokens } from '../../@utils/faucet'
-import { useAccount, useSignMessage } from 'wagmi'
+import { LoggerInstance } from '@oceanprotocol/lib'
+import { ReactElement, useCallback, useEffect, useState } from 'react'
 import { toast } from 'react-toastify'
+import { useAccount, useNetwork, useSignMessage } from 'wagmi'
+import content from '../../../content/pages/faucet.json'
+import { getMessage, requestTokens } from '../../@utils/faucet'
+import styles from './index.module.css'
+import NetworkName from '../@shared/NetworkName'
 
 interface Content {
   title: string
   description: string
-  input: {
-    label: string
-    placeholder: string
-    buttonLabel: string
+  buttonLabel: string
+  card: {
+    cardTitle: string
+    cardDescription: string
+    cardExplainerTitle: string
+    cardExplainerFirstStep: string
+    cardExplainerSecondStep: string
+    cardExplainerThirdStep: string
+    cardExplainerFourthStep: string
+    cardExplainerFithStep: string
+    cardNetworkAddress: string
+    cardNetwork: string
   }
 }
 
-export default function FaucetPage({
-  didQueryString
-}: {
-  didQueryString?: string
-}): ReactElement {
-  const { input }: Content = content
-  const { label, placeholder, buttonLabel } = input
+const FaucetPage = (): ReactElement => {
+  const { buttonLabel }: Content = content
+  const { card }: Content = content
+  const {
+    cardTitle,
+    cardDescription,
+    cardExplainerTitle,
+    cardExplainerFirstStep,
+    cardExplainerSecondStep,
+    cardExplainerThirdStep,
+    cardExplainerFourthStep,
+    cardExplainerFithStep,
+    cardNetworkAddress,
+    cardNetwork
+  } = card
 
   const [isLoading, setIsLoading] = useState(false)
-  const [did, setDid] = useState<string>('')
+  const [isRequestingTokens, setIsRequestingTokens] = useState(false)
   const [message, setMessage] = useState<string>()
   const [error, setError] = useState<string>()
 
-  const { address } = useAccount()
+  const { address: accountAddress } = useAccount()
+  const { chain } = useNetwork()
 
   const {
     data: signMessageData,
@@ -51,34 +66,41 @@ export default function FaucetPage({
     setMessage(undefined)
 
     try {
-      const message = await getMessage(address)
-
+      const message = await getMessage(accountAddress)
       signMessage({ message })
     } catch (error) {
       LoggerInstance.error(error)
-      setError(error.message)
+      setError(error.message || 'Error generating message.')
     } finally {
       setIsLoading(false)
     }
-  }, [])
+  }, [accountAddress, signMessage])
 
-  const handleSearchStart = () => {
-    handleVerify()
-  }
+  const handleSearchStart = useCallback(
+    (e: React.FormEvent) => {
+      e.preventDefault()
+      handleVerify()
+    },
+    [handleVerify]
+  )
 
-  const faucetTokenRequest = async () => {
+  const faucetTokenRequest = useCallback(async () => {
+    setIsRequestingTokens(true)
     try {
-      const hashes = await requestTokens(address, signMessageData)
-
+      const hashes = await requestTokens(accountAddress, signMessageData)
       toast.success(`Successfully requested test tokens: ${hashes.join(', ')}`)
       setMessage(
         'Tokens successfully requested. It can take up to 30 seconds until tokens show up in your wallet.'
       )
     } catch (error) {
-      toast.error('Unable to request tokens. Please try again.')
+      const errorMessage =
+        error.message || 'Unable to request tokens. Please try again later.'
+      setError(errorMessage)
       LoggerInstance.error('[Onboarding] Error requesting tokens', error)
+    } finally {
+      setIsRequestingTokens(false)
     }
-  }
+  }, [accountAddress, signMessageData])
 
   useEffect(() => {
     if (signMessageLoading) return
@@ -99,59 +121,42 @@ export default function FaucetPage({
     signMessageSuccess,
     signMessageData,
     signMessageError,
-    signMessageLoading
+    signMessageLoading,
+    faucetTokenRequest
   ])
 
-  useEffect(() => {
-    const fetchAddress = async () => {
-      try {
-        const provider = new ethers.providers.Web3Provider(window.ethereum)
-        const signer = provider.getSigner()
-        const address = await signer.getAddress()
-        setDid(address)
-      } catch (error) {
-        LoggerInstance.error(error)
-      }
-    }
-
-    fetchAddress()
-
-    if (didQueryString) {
-      setDid(didQueryString)
-      handleVerify()
-    }
-  }, [didQueryString, handleVerify])
-
   return (
-    <div>
-      <form
-        className={styles.form}
-        onSubmit={async (e) => {
-          e.preventDefault()
-          handleSearchStart()
-        }}
-      >
-        <InputGroup>
-          <InputElement
-            className={styles.didInput}
-            label={label}
-            name="did"
-            onChange={(event) =>
-              setDid((event.target as HTMLInputElement).value)
-            }
-            placeholder={placeholder}
-            value={did}
-            readOnly
-          />
-          <Button
-            disabled={!did || isLoading}
-            style="primary"
-            size="small"
-            type="submit"
-          >
-            {isLoading ? <Loader /> : buttonLabel}
-          </Button>
-        </InputGroup>
+    <div className={styles.card}>
+      <h2 className={styles.title}>{cardTitle}</h2>
+      <p className={styles.description}>{cardDescription}</p>
+      <div className={styles.instructions}>
+        <h3>{cardExplainerTitle}</h3>
+        <ol>
+          <li>{cardExplainerFirstStep}</li>
+          <li>{cardExplainerSecondStep}</li>
+          <li>{cardExplainerThirdStep}</li>
+          <li>{cardExplainerFourthStep}</li>
+          <li>{cardExplainerFithStep}</li>
+        </ol>
+      </div>
+      <div className={styles.address}>
+        <strong>{cardNetworkAddress}:</strong> {accountAddress}
+      </div>
+      <div className={styles.network}>
+        <strong>{cardNetwork}:</strong> <NetworkName networkId={chain?.id} />
+      </div>
+      <form className={styles.form} onSubmit={handleSearchStart}>
+        <Button
+          disabled={!accountAddress || isLoading || isRequestingTokens}
+          style="primary"
+          size="small"
+          type="submit"
+          className={
+            isLoading || isRequestingTokens ? styles.disabledButton : ''
+          }
+        >
+          {isLoading || isRequestingTokens ? <Loader /> : buttonLabel}
+        </Button>
       </form>
       {!isLoading && error && (
         <div className={styles.errorContainer}>
@@ -166,3 +171,5 @@ export default function FaucetPage({
     </div>
   )
 }
+
+export default FaucetPage

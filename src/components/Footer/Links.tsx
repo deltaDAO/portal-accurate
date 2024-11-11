@@ -45,7 +45,7 @@ export default function Links(): ReactElement {
             href="https://portal.pontus-x.eu/privacy/en"
             className={styles.link}
           >
-            Privacy
+            Privacy Policy
           </Button>
           {appConfig.privacyPreferenceCenter === 'true' && (
             <Button

@@ -1,23 +1,24 @@
 import { ReactElement } from 'react'
-import { useRouter } from 'next/router'
-import Verify from '../components/Faucet'
-import AssetProvider from '@context/Asset'
+import Faucet from '../components/Faucet'
 import content from '../../content/pages/faucet.json'
 import Page from '@components/@shared/Page'
+import { useMarketMetadata } from '../@context/MarketMetadata'
+import { useRouter } from 'next/router'
 
-export default function PageVerify(): ReactElement {
+export default function PageFaucet(): ReactElement {
+  const {
+    appConfig: { faucet }
+  } = useMarketMetadata()
+
   const router = useRouter()
-  const { did } = router.query
 
-  return (
-    <AssetProvider did={did as string}>
-      <Page
-        title={content.title}
-        description={content.description}
-        uri={router.route}
-      >
-        <Verify didQueryString={did as string} />
+  if (faucet.enabled === 'true') {
+    return (
+      <Page title={content.title} description={content.description} uri="">
+        <Faucet />
       </Page>
-    </AssetProvider>
-  )
+    )
+  } else {
+    router.push('/404')
+  }
 }

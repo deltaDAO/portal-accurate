@@ -25,9 +25,10 @@ declare type MenuItem = {
   image?: string
   category?: string
   className?: string
+  isLive?: boolean
 }
 
-export function MenuLink({ name, link, className }: MenuItem) {
+export function MenuLink({ name, link, className, isLive }: MenuItem) {
   const router = useRouter()
 
   const basePath = router?.pathname.split(/[/?]/)[1]
@@ -39,7 +40,9 @@ export function MenuLink({ name, link, className }: MenuItem) {
     [className]: className
   })
 
-  return (
+  return isLive === false ? (
+    <></>
+  ) : (
     <Button
       className={classes}
       {...(link.startsWith('/') ? { to: link } : { href: link })}
@@ -59,15 +62,22 @@ export default function Menu(): ReactElement {
       </Link>
 
       <ul className={styles.navigation}>
-        {siteContent?.menu.map((item: MenuItem) => (
-          <li key={item.name}>
-            {item?.subItems ? (
-              <MenuDropdown label={item.name} items={item.subItems} />
-            ) : (
-              <MenuLink {...item} />
-            )}
-          </li>
-        ))}
+        {siteContent?.menu.map((item: MenuItem) => {
+          if (
+            item.link?.toLowerCase() === '/faucet' &&
+            appConfig.faucet.enabled !== 'true'
+          )
+            return false
+          return (
+            <li key={item.name}>
+              {item?.subItems ? (
+                <MenuDropdown label={item.name} items={item.subItems} />
+              ) : (
+                <MenuLink {...item} />
+              )}
+            </li>
+          )
+        })}
       </ul>
 
       <div className={styles.actions}>

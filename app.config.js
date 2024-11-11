@@ -103,11 +103,12 @@ module.exports = {
     errorMargin: 10,
     // Map chainIds to their respective status endpoints
     statusEndpoints: {
-      100: 'https://status.genx.delta-dao.com/api/check-blocks'
+      32456: 'https://status.dev.pontus-x.eu/'
     }
   },
 
   faucet: {
+    enabled: process.env.NEXT_PUBLIC_FAUCET_ENABLED || 'false',
     baseUri: 'https://faucet.api.pontus-x.eu'
   }
 }

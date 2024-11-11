@@ -21,7 +21,6 @@
       "name": "Faucet",
       "link": "/faucet"
     },
-
     {
       "name": "Log",
       "link": "https://explorer.pontus-x.eu/"
@@ -30,12 +29,8 @@
       "name": "Ecosystem",
       "subItems": [
         {
-          "name": "Pontus-X Portal",
-          "link": "https://portal.pontus-x.eu/",
-          "description": "The Pontus-X reference ecosystem portal.",
-          "image": "deltadao-logo.webp",
-          "category": "ecosystem",
-          "isLive": false
+          "name": "Pontus-X",
+          "link": "https://www.pontus-x.eu/"
         },
         {
           "name": "EuProGigant",
@@ -70,19 +65,11 @@
           "isLive": true
         },
         {
-          "name": "Car Repair 4.0",
-          "link": "https://portal.autowerkstatt40.org/",
-          "description": "Car Repair 4.0 develops a hub infrastructure that connects car workshops to Gaia-X ecosystems and enables AI-supported fault tracking.",
-          "image": "carrepair40.webp",
-          "category": "AI",
-          "isLive": true
-        },
-        {
-          "name": "Service-Meister",
-          "link": "https://servicemeister.pontus-x.eu/",
-          "description": "An AI-based Service Ecosystem for Technical Service in the Age of Industry 4.0.",
-          "image": "service-meister-logo.webp",
-          "category": "AI",
+          "name": "FIWARE",
+          "link": "https://fiware-marketplace-a4eqd.ondigitalocean.app/",
+          "description": "A curated framework of Open Source Platform components to accelerate the development of Smart Solutions.",
+          "image": "logo-fiware-full.webp",
+          "category": "smart city",
           "isLive": true
         },
         {
@@ -91,6 +78,14 @@
           "description": "Explore the Open Science Ecosystem, a collaboration of libraries, universities, and science pioneers under Gaia-X principles for limitless shared knowledge.",
           "image": "sbb-logo.webp",
           "category": "language models",
+          "isLive": true
+        },
+        {
+          "name": "Car Repair 4.0",
+          "link": "https://portal.autowerkstatt40.org/",
+          "description": "Car Repair 4.0 develops a hub infrastructure that connects car workshops to Gaia-X ecosystems and enables AI-supported fault tracking.",
+          "image": "carrepair40.webp",
+          "category": "AI",
           "isLive": true
         },
         {
@@ -117,13 +112,29 @@
           "category": "agriculture",
           "isLive": true
         },
-       {
+        {
           "name": "Polish Agriculture Data Space",
           "link": "https://dataspaces.psnc.pl/",
           "description": "An open data space platform for sharing and marketing agri-related datasets guaranteeing data sovereignty.",
           "image": "PSNC.webp",
           "category": "agriculture",
           "isLive": true
+        },
+        {
+          "name": "Service-Meister",
+          "link": "https://servicemeister.pontus-x.eu/",
+          "description": "An AI-based Service Ecosystem for Technical Service in the Age of Industry 4.0.",
+          "image": "service-meister-logo.webp",
+          "category": "AI",
+          "isLive": true
+        },
+        {
+          "name": "deltaDAO AI marketplace",
+          "link": "https://market.delta-dao.com/",
+          "description": "With deltaDAO's AI Marketplace, you have the freedom to decide how your AI service is offered. By keeping your AI private, you retain full control and do not disclose your valuable IP.",
+          "image": "deltadao-logo.webp",
+          "category": "AI",
+          "isLive": false
         }
       ]
     },
@@ -153,7 +164,7 @@
   "footer": {
     "notice": "The ACCURATE project is funded by the European Union, under Grant Agreement number 101138269. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Health and Digital Executive Agency. Neither the European Union nor the granting authority can be held responsible for them.\n\nStart: 01/12/2023\nFinish: 30/11/2026",
     "copyright": "Built by [deltaDAO](https://delta-dao.com)",
-    "privacyTitle": "Privacy",
+    "privacyTitle": "Legal",
     "content": [
       {
         "title": "External",

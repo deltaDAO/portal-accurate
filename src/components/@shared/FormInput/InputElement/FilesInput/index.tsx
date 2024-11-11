@@ -184,7 +184,7 @@ export default function FilesInput(props: InputProps): ReactElement {
 
               {storageType !== 'saas' && (
                 <Button
-                  style="ghost"
+                  style="primary"
                   onClick={(e: React.SyntheticEvent) => {
                     e.preventDefault()
                     handleValidation(e, field.value[0].url)
