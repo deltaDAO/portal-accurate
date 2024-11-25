@@ -110,5 +110,7 @@ module.exports = {
   faucet: {
     enabled: process.env.NEXT_PUBLIC_FAUCET_ENABLED || 'false',
     baseUri: 'https://faucet.api.pontus-x.eu'
-  }
+  },
+
+  showOnboardingModuleByDefault: process.env.NEXT_PUBLIC_SHOW_ONBOARDING_MODULE_BY_DEFAULT === 'true',
 }

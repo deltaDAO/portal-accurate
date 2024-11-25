@@ -50,6 +50,7 @@ export interface AppConfig {
     enabled: string
     baseUri: string
   }
+  showOnboardingModuleByDefault: boolean
 }
 export interface SiteContent {
   siteTitle: string
