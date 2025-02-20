@@ -202,7 +202,8 @@ export async function getOpcsApprovedTokens(
           ...approvedTokensWithoutOcean,
           {
             address: tokenAddressesEUROe[chainId],
-            decimals: 6,
+            // TODO: revert once decimals changed to 6 on pontus-x
+            decimals: chainId === 32456 ? 18 : 6,
             name: 'EUROe',
             symbol: 'EUROe'
           }
