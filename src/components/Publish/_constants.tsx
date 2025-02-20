@@ -1,4 +1,4 @@
-import { allowFixedPricing, defaultAccessTerms } from '../../../app.config'
+import { allowFixedPricing, customProviderUrl } from '../../../app.config'
 import {
   FormPublishData,
   MetadataAlgorithmContainer,
@@ -59,7 +59,7 @@ const computeOptions: ServiceComputeOptions = {
 export const initialValues: FormPublishData = {
   user: {
     stepCurrent: 1,
-    chainId: 100,
+    chainId: 32457,
     accountId: ''
   },
   metadata: {
@@ -99,7 +99,7 @@ export const initialValues: FormPublishData = {
       dataTokenOptions: { name: '', symbol: '' },
       access: 'access',
       providerUrl: {
-        url: 'https://provider.mainnet.oceanprotocol.com',
+        url: customProviderUrl,
         valid: true,
         custom: false
       },
@@ -114,7 +114,7 @@ export const initialValues: FormPublishData = {
     deny: []
   },
   pricing: {
-    baseToken: { address: '', name: '', symbol: 'OCEAN', decimals: 18 },
+    baseToken: { address: '', name: '', symbol: 'EUROe', decimals: 6 },
     price: 0,
     type: allowFixedPricing === 'true' ? 'fixed' : 'free',
     freeAgreement: false

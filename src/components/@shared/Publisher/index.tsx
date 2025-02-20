@@ -3,7 +3,7 @@ import styles from './index.module.css'
 import Link from 'next/link'
 import { accountTruncate } from '@utils/wallet'
 import { useIsMounted } from '@hooks/useIsMounted'
-import addresses from 'address.config'
+import addresses from '../../../../pontusxAddresses.json'
 
 export interface PublisherProps {
   account: string
@@ -30,11 +30,9 @@ export default function Publisher({
 
     // set default name on hook
     // to avoid side effect (UI not updating on account's change)
-    if (showName && isMounted() && addresses.verifiedAddresses[account]) {
-      const accountName = addresses.verifiedAddresses[account]
-      accountName.length > 15
-        ? setName(accountTruncate(accountName, 15))
-        : setName(accountName)
+    if (showName && isMounted() && addresses[account]) {
+      const accountName = addresses[account]
+      setName(accountName)
     } else if (verifiedServiceProviderName && isMounted())
       setName(verifiedServiceProviderName || accountTruncate(account))
   }, [showName, account, isMounted, verifiedServiceProviderName])
