@@ -26,115 +26,71 @@
       "link": "https://explorer.pontus-x.eu/"
     },
     {
-      "name": "Ecosystem",
-      "subItems": [
+    "name": "Ecosystem",
+    "subItems": [
         {
-          "name": "Pontus-X",
-          "link": "https://www.pontus-x.eu/"
+            "name": "Pontus-X Ecosystem",
+            "link": "https://www.pontus-x.eu/"
         },
         {
-          "name": "EuProGigant",
-          "link": "https://portal.euprogigant.io/",
-          "description": "Gaia-X Lighthouse EuProGigant is the first funded binational industrial project with the practical implementation of the Gaia-X principles.",
-          "image": "euprogigant-logo.webp",
-          "category": "manufacturing",
-          "isLive": true
+            "name": "EuProGigant",
+            "link": "https://portal.euprogigant.io/"
         },
         {
-          "name": "GX4FM moveID",
-          "link": "https://portal.moveid.eu/",
-          "description": "Gaia-X Lighthouse Gaia-X 4 Future Mobility aims to develop a decentralized digital mobility identity infrastructure for Europe.",
-          "image": "gx4fm_moveid.webp",
-          "category": "mobility",
-          "isLive": true
+            "name": "GX4FM moveID",
+            "link": "https://portal.moveid.eu/"
         },
         {
-          "name": "COOPERANTS",
-          "link": "https://federator.cooperants.info/marketplace",
-          "description": "Gaia-X Lighthouse COOPERANTS is the collaborative alliance in the Aeronautics and space sector that solves pressing digital collaboration problems by creating a common data space.",
-          "image": "cooperants-logo.webp",
-          "category": "manufacturing",
-          "isLive": true
+            "name": "COOPERANTS",
+            "link": "https://federator.cooperants.info/marketplace"
         },
         {
-          "name": "Airbus",
-          "link": "https://airbus.pontus-x.eu/",
-          "description": "For those who make this world a safer place. We pioneer defense and space for their mission success.",
-          "image": "airbus-logo.webp",
-          "category": "manufacturing",
-          "isLive": true
+            "name": "Flex4Res",
+            "link": "https://flex4res.pontus-x.eu/"
         },
         {
-          "name": "FIWARE",
-          "link": "https://fiware-marketplace-a4eqd.ondigitalocean.app/",
-          "description": "A curated framework of Open Source Platform components to accelerate the development of Smart Solutions.",
-          "image": "logo-fiware-full.webp",
-          "category": "smart city",
-          "isLive": true
+            "name": "Airbus",
+            "link": "https://airbus.pontus-x.eu/"
         },
         {
-          "name": "Berlin State Library",
-          "link": "https://sbb.pontus-x.eu/",
-          "description": "Explore the Open Science Ecosystem, a collaboration of libraries, universities, and science pioneers under Gaia-X principles for limitless shared knowledge.",
-          "image": "sbb-logo.webp",
-          "category": "language models",
-          "isLive": true
+            "name": "Pontus-X Main Portal",
+            "link": "https://portal.main.pontus-x.eu/"
         },
         {
-          "name": "Car Repair 4.0",
-          "link": "https://portal.autowerkstatt40.org/",
-          "description": "Car Repair 4.0 develops a hub infrastructure that connects car workshops to Gaia-X ecosystems and enables AI-supported fault tracking.",
-          "image": "carrepair40.webp",
-          "category": "AI",
-          "isLive": true
+            "name": "AgrospAI",
+            "link": "https://agrospai.udl.cat/"
         },
         {
-          "name": "Flex4Res",
-          "link": "https://flex4res.pontus-x.eu/",
-          "description": "Flex4Res stands for Data spaces for FLEXible production lines and supply chains FOR RESilient manufacturing. Flex4Res develops an open platform for secure and sovereign data exchange",
-          "image": "flex4res-logo.webp",
-          "category": "manufacturing",
-          "isLive": true
+            "name": "beebucket",
+            "link": "https://daseen.pontus-x.eu/"
         },
         {
-          "name": "Future Mobility Marketplace",
-          "link": "https://marketplace.future-mobility-alliance.org/",
-          "description": "Find or publish datasets and AI algorithms for solving challenges in mobility.",
-          "image": "fmdm-logo.webp",
-          "category": "mobility",
-          "isLive": true
+            "name": "Future Engineering Network (FEN)",
+            "link": "https://fen.pontus-x.eu/"
         },
         {
-          "name": "UdL Research Data Space",
-          "link": "https://dataspace.angliru.udl.cat/",
-          "description": "An open research platform following the FAIR guiding principles of findability, accessibility, interoperability and reusability, while guaranteeing data sovereignty.",
-          "image": "udl-logo.webp",
-          "category": "agriculture",
-          "isLive": true
+            "name": "Berlin State Library",
+            "link": "https://sbb.pontus-x.eu/"
         },
         {
-          "name": "Polish Agriculture Data Space",
-          "link": "https://dataspaces.psnc.pl/",
-          "description": "An open data space platform for sharing and marketing agri-related datasets guaranteeing data sovereignty.",
-          "image": "PSNC.webp",
-          "category": "agriculture",
-          "isLive": true
+            "name": "FIWARE",
+            "link": "https://fiware-marketplace-a4eqd.ondigitalocean.app/"
         },
         {
-          "name": "Service-Meister",
-          "link": "https://servicemeister.pontus-x.eu/",
-          "description": "An AI-based Service Ecosystem for Technical Service in the Age of Industry 4.0.",
-          "image": "service-meister-logo.webp",
-          "category": "AI",
-          "isLive": true
+            "name": "Polish Agriculture Data Space",
+            "link": "https://dataspaces.psnc.pl/"
         },
         {
-          "name": "deltaDAO AI marketplace",
-          "link": "https://market.delta-dao.com/",
-          "description": "With deltaDAO's AI Marketplace, you have the freedom to decide how your AI service is offered. By keeping your AI private, you retain full control and do not disclose your valuable IP.",
-          "image": "deltadao-logo.webp",
-          "category": "AI",
-          "isLive": false
+            "name": "Open Dataspace Lab",
+            "link": "https://www.opendataspacelab.eu/"
+        },
+        {
+            "name": "Car Repair 4.0",
+            "link": "https://portal.autowerkstatt40.org/"
+        },
+        {
+            "name": "Service-Meister",
+            "link": "https://servicemeister.pontus-x.eu/"
         }
       ]
     },
