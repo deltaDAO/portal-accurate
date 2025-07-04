@@ -3,11 +3,6 @@ const PONTUSX_ADDRESSES = require('./pontusxAddresses.json')
 module.exports = {
   whitelists: {
     'nft.owner': [
-      '0x4A806a4851472F7cFd579d3FF5465F03c3c2B5d4',
-      '0x21CF19e1FaF3A62f82B432f82152e8c5C0FdBdaF',
-      '0x9dfbda23b65efB1c836828D74a96eB8528A60f3C',
-      '0xb2AF8b92bFaC5299Cb6EDEf16150BFD1d4d26a93',
-      '0x3dB4E0b1fC6072271BF51e9a0CC17E3c7C4C99f5',
       '0x9B421d0f5d378b66324251d6CDc1945a6560110b', //	SIMAVI
       '0x13a9FfFC7fb684CCc623C305B46b7eD6b3a73C66', //	ENGINSOFT
       '0x7d46Bb46ba45f08480bA80150d3594fd9f3e212d', //	IMT Atlantique
@@ -18,7 +13,7 @@ module.exports = {
       '0x7e7cea5dda047F66b8755Cb4Bf1d8eDBFB236e35', //	Airbus Atlantic
       '0x13f8514cA72C83386929f0BAa9bCe6B840cbA03A', //	Continental Automotive
       '0x98bDc1EaDE6D4ad7032A091Dc8bE6D217cB37eF3', //	iED
-      '0x28080F654eED6CC00e8b16F4841E92CD0c2C0778' //	deltaDAO
+      '0xf958C1F667f71C1C66C1702830A89057a90F40eE' //	deltaDAO
     ],
     'datatokens.address': [
       '0x25244fAad80E52E3d5E1f5f7B7D00132a97169D5', // Condition Monitoring Software - EuProGigant Validation Platform
