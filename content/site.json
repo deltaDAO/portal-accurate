@@ -46,12 +46,12 @@
             "link": "https://federator.cooperants.info/marketplace"
         },
         {
-            "name": "Flex4Res",
-            "link": "https://flex4res.pontus-x.eu/"
+            "name": "SENSE",
+            "link": "https://sense.pontus-x.eu"
         },
         {
-            "name": "Airbus",
-            "link": "https://airbus.pontus-x.eu/"
+            "name": "Flex4Res",
+            "link": "https://flex4res.pontus-x.eu/"
         },
         {
             "name": "Pontus-X Main Portal",
@@ -84,14 +84,6 @@
         {
             "name": "Open Dataspace Lab",
             "link": "https://www.opendataspacelab.eu/"
-        },
-        {
-            "name": "Car Repair 4.0",
-            "link": "https://portal.autowerkstatt40.org/"
-        },
-        {
-            "name": "Service-Meister",
-            "link": "https://servicemeister.pontus-x.eu/"
         }
       ]
     },
