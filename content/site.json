@@ -50,14 +50,6 @@
             "link": "https://flex4res.pontus-x.eu/"
         },
         {
-            "name": "Airbus",
-            "link": "https://airbus.pontus-x.eu/"
-        },
-        {
-            "name": "Pontus-X Main Portal",
-            "link": "https://portal.main.pontus-x.eu/"
-        },
-        {
             "name": "AgrospAI",
             "link": "https://agrospai.udl.cat/"
         },
@@ -82,34 +74,30 @@
             "link": "https://dataspaces.psnc.pl/"
         },
         {
-            "name": "Open Dataspace Lab",
-            "link": "https://www.opendataspacelab.eu/"
-        },
-        {
-            "name": "Car Repair 4.0",
-            "link": "https://portal.autowerkstatt40.org/"
-        },
-        {
-            "name": "Service-Meister",
-            "link": "https://servicemeister.pontus-x.eu/"
-        }
+    "name": "GMN Data Marketplace",
+    "link": "https://gmn.pontus-x.eu/"
+  }
       ]
     },
     {
       "name": "Resources",
       "subItems": [
         {
-          "name": "Documentation",
-          "link": "https://docs.pontus-x.eu/"
-        },
-        {
-          "name": "Landing Page",
-          "link": "https://www.pontus-x.eu/"
-        },
-        {
-          "name": "nautilus",
-          "link": "https://nautilus.delta-dao.com/"
-        }
+    "name": "Documentation",
+    "link": "https://docs.pontus-x.eu/"
+  },
+  {
+    "name": "Fast Track Onboarding",
+    "link": "https://onboarding.delta-dao.com/"
+  },
+  {
+    "name": "Pontus-X Landing Page",
+    "link": "https://www.pontus-x.eu/"
+  },
+  {
+    "name": "nautilus",
+    "link": "https://nautilus.delta-dao.com/"
+  }
       ]
     }
   ],
